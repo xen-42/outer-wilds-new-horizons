@@ -1,10 +1,14 @@
+
+    
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New Horizons Documentation | Star System</title>
+    <title>New Horizons Documentation | Translation</title>
     <link href="https://bootswatch.com/5/darkly/bootstrap.min.css"
           crossorigin="anonymous" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
@@ -28,38 +32,42 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/">Home</a>
-                    </li>
+                    
+                        
+    <li class="nav-item">
+        <a href="/" class="nav-link " >Home</a>
+    </li>
+
+                    
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        <a class="nav-link active dropdown-toggle" aria-current="page" href="#" id="navbarDropdown" role="button"
                            data-bs-toggle="dropdown" aria-expanded="false">
                             Schemas
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             
                                 <li><a class="dropdown-item"
-                                       href="/schemas/body_schema.html">Body</a></li>
+                                       href="/schemas/star_system.html">Star System</a></li>
                             
                                 <li><a class="dropdown-item"
-                                       href="/schemas/star_system_schema.html">Star System</a></li>
+                                       href="/schemas/translation.html">Translation</a></li>
                             
                                 <li><a class="dropdown-item"
-                                       href="/schemas/translation_schema.html">Translation</a></li>
+                                       href="/schemas/body.html">Body</a></li>
                             
                         </ul>
                     </li>
                 </ul>
-                <ul class="navbar-nav mb-2 mb-lg-0">
+                <ul class="navbar-nav mb-2 ms-md-auto mb-lg-0">
                     <li class="nav-item me-2">
-                        <a class="link-light" href="https://github.com/xen-42/outer-wilds-new-horizons">
-                            <i class="bi-github"></i>
-                        </a>
+                        
+    <a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://github.com/xen-42/outer-wilds-new-horizons"><i class="bi-github"></i><small class="d-lg-none ms-2">GitHub</small></a>
+
                     </li>
                     <li class="nav-item me-2">
-                        <a class="link-light" href="https://github.com/xen-42/outer-wilds-new-horizons">
-                            <i class="bi-discord"></i>
-                        </a>
+                        
+    <a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://discord.gg/9vE5aHxcF9"><i class="bi-discord"></i><small class="d-lg-none ms-2">Discord</small></a>
+
                     </li>
                 </ul>
             </div>
@@ -67,11 +75,11 @@
     </nav>
 </header>
 <main>
-    <div class="container-fluid">
+    <div class="container-lg">
         
     <div class="row">
         <div class="col text-center">
-            <h1>Star System Schema</h1>
+            <h1>Translation Schema</h1>
         </div>
     </div>
     <div class="row">
@@ -84,7 +92,9 @@
 
     
         
-            <div class="breadcrumbs"></div>
+            <div class="breadcrumbs">
+    
+</div>
         
 
         
@@ -107,7 +117,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Configuration for a specific star system</p>
+                <span class="description"><p>Describes a set tables to use for translations</p>
 </span>
             
         </div>
@@ -120,16 +130,18 @@
         
         
             
-
-            
-            
-            
-            
+                 <span class="badge bg-info no-additional">No Additional Properties</span>
             
 
             
             
             
+            
+            
+
+            
+            
+            
 
             
             
@@ -139,6 +151,7 @@
 
             
             
+
 
             
             
@@ -156,27 +169,27 @@
                 
 <div class="row my-2">
     <div class="col">
-        <div class="accordion" id="accordioncanEnterViaWarpDrive">
+        <div class="accordion" id="accordionShipLogDictionary">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingcanEnterViaWarpDrive">
+                <h2 class="accordion-header" id="headingShipLogDictionary">
                     <button class="accordion-button collapsed" type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#canEnterViaWarpDrive"
-                            aria-expanded="" aria-controls="canEnterViaWarpDrive"
-                            onclick="setAnchor('#canEnterViaWarpDrive')">
+                            data-bs-target="#ShipLogDictionary"
+                            aria-expanded="" aria-controls="ShipLogDictionary"
+                            onclick="setAnchor('#ShipLogDictionary')">
 
                         
-                        <span class="property-nam align-middle pb-1">canEnterViaWarpDrive</span>
+                        <span class="property-nam align-middle pb-1">ShipLogDictionary</span>
                         
                         
                         
                         
                     </button>
                 </h2>
-                <div id="canEnterViaWarpDrive"
+                <div id="ShipLogDictionary"
                      class="accordion-collapse collapse"
-                     aria-labelledby="headingcanEnterViaWarpDrive"
-                     data-parent="#accordioncanEnterViaWarpDrive">
+                     aria-labelledby="headingShipLogDictionary"
+                     data-parent="#accordionShipLogDictionary">
                     <div class="accordion-body">
                         
 
@@ -190,21 +203,29 @@
 
     
         
-            <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#canEnterViaWarpDrive" onclick="anchorLink('canEnterViaWarpDrive')">canEnterViaWarpDrive</a></div>
+            <div class="breadcrumbs">
+    
+        
+            Root
+        
+        
+            <i class="bi-arrow-right-short"></i>
+        
+    
+        
+            <a href="#ShipLogDictionary"
+               onclick="anchorLink('ShipLogDictionary')">ShipLogDictionary</a>
+        
+        
+    
+</div>
         
 
         
         
             <div class="row">
                 <div class="col">
-                    <span class="badge bg-secondary">Type: boolean</span>
+                    <span class="badge bg-secondary">Type: object</span>
                 </div>
             </div>
         
@@ -220,7 +241,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Whether this system can be warped to via the warp drive</p>
+                <span class="description"><p>A set of key value pairs where each key is the english text and each value is the translated text</p>
 </span>
             
         </div>
@@ -231,6 +252,16 @@
 
     
         
+    
+
+    
+    
+
+    
+
+
+    
+        
         
             
 
@@ -253,6 +284,7 @@
             
             
 
+
             
             
 
@@ -268,6 +300,8 @@
             
 
         
+    
+
     
 
                     </div>
@@ -280,27 +314,27 @@
                 
 <div class="row my-2">
     <div class="col">
-        <div class="accordion" id="accordionstartHere">
+        <div class="accordion" id="accordionUIDictionary">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingstartHere">
+                <h2 class="accordion-header" id="headingUIDictionary">
                     <button class="accordion-button collapsed" type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#startHere"
-                            aria-expanded="" aria-controls="startHere"
-                            onclick="setAnchor('#startHere')">
+                            data-bs-target="#UIDictionary"
+                            aria-expanded="" aria-controls="UIDictionary"
+                            onclick="setAnchor('#UIDictionary')">
 
                         
-                        <span class="property-nam align-middle pb-1">startHere</span>
+                        <span class="property-nam align-middle pb-1">UIDictionary</span>
                         
                         
                         
                         
                     </button>
                 </h2>
-                <div id="startHere"
+                <div id="UIDictionary"
                      class="accordion-collapse collapse"
-                     aria-labelledby="headingstartHere"
-                     data-parent="#accordionstartHere">
+                     aria-labelledby="headingUIDictionary"
+                     data-parent="#accordionUIDictionary">
                     <div class="accordion-body">
                         
 
@@ -314,21 +348,29 @@
 
     
         
-            <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#startHere" onclick="anchorLink('startHere')">startHere</a></div>
+            <div class="breadcrumbs">
+    
+        
+            Root
+        
+        
+            <i class="bi-arrow-right-short"></i>
+        
+    
+        
+            <a href="#UIDictionary"
+               onclick="anchorLink('UIDictionary')">UIDictionary</a>
+        
+        
+    
+</div>
         
 
         
         
             <div class="row">
                 <div class="col">
-                    <span class="badge bg-secondary">Type: boolean</span>
+                    <span class="badge bg-secondary">Type: object</span>
                 </div>
             </div>
         
@@ -344,7 +386,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Set to true if you want to spawn here after dying, not Timber Hearth. You can still warp back to the main star system.</p>
+                <span class="description"><p>A set of key value pairs where each key is the english text and each value is the translated text</p>
 </span>
             
         </div>
@@ -355,6 +397,16 @@
 
     
         
+    
+
+    
+    
+
+    
+
+
+    
+        
         
             
 
@@ -377,6 +429,7 @@
             
             
 
+
             
             
 
@@ -392,6 +445,8 @@
             
 
         
+    
+
     
 
                     </div>
@@ -404,27 +459,27 @@
                 
 <div class="row my-2">
     <div class="col">
-        <div class="accordion" id="accordionfactRequiredForWarp">
+        <div class="accordion" id="accordionDialogueDictionary">
             <div class="accordion-item">
-                <h2 class="accordion-header" id="headingfactRequiredForWarp">
+                <h2 class="accordion-header" id="headingDialogueDictionary">
                     <button class="accordion-button collapsed" type="button"
                             data-bs-toggle="collapse"
-                            data-bs-target="#factRequiredForWarp"
-                            aria-expanded="" aria-controls="factRequiredForWarp"
-                            onclick="setAnchor('#factRequiredForWarp')">
+                            data-bs-target="#DialogueDictionary"
+                            aria-expanded="" aria-controls="DialogueDictionary"
+                            onclick="setAnchor('#DialogueDictionary')">
 
                         
-                        <span class="property-nam align-middle pb-1">factRequiredForWarp</span>
+                        <span class="property-nam align-middle pb-1">DialogueDictionary</span>
                         
                         
                         
                         
                     </button>
                 </h2>
-                <div id="factRequiredForWarp"
+                <div id="DialogueDictionary"
                      class="accordion-collapse collapse"
-                     aria-labelledby="headingfactRequiredForWarp"
-                     data-parent="#accordionfactRequiredForWarp">
+                     aria-labelledby="headingDialogueDictionary"
+                     data-parent="#accordionDialogueDictionary">
                     <div class="accordion-body">
                         
 
@@ -438,21 +493,29 @@
 
     
         
-            <div class="breadcrumbs">root
-        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-            <path
-                fill-rule="evenodd"
-                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
-            />
-        </svg>
-    <a href="#factRequiredForWarp" onclick="anchorLink('factRequiredForWarp')">factRequiredForWarp</a></div>
+            <div class="breadcrumbs">
+    
+        
+            Root
+        
+        
+            <i class="bi-arrow-right-short"></i>
+        
+    
+        
+            <a href="#DialogueDictionary"
+               onclick="anchorLink('DialogueDictionary')">DialogueDictionary</a>
+        
+        
+    
+</div>
         
 
         
         
             <div class="row">
                 <div class="col">
-                    <span class="badge bg-secondary">Type: string</span>
+                    <span class="badge bg-secondary">Type: object</span>
                 </div>
             </div>
         
@@ -468,7 +531,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Set to the FactID that must be revealed before it can be warped to. Don't set "CanEnterViaWarpDrive" to false if you're using this, that would make no sense.</p>
+                <span class="description"><p>A set of key value pairs where each key is the english text and each value is the translated text</p>
 </span>
             
         </div>
@@ -479,6 +542,16 @@
 
     
         
+    
+
+    
+    
+
+    
+
+
+    
+        
         
             
 
@@ -501,11 +574,9 @@
             
             
 
-            
-            
-    
-    
 
+            
+            
 
 
             
@@ -519,6 +590,8 @@
             
 
         
+    
+
     
 
                     </div>
