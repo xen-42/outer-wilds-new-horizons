@@ -169,7 +169,7 @@
         
     <div class="row">
         <div class="col">
-            <h3>How to update existing planets</h3>
+            <h2>How to update existing planets</h2>
 <p>Similar to above, make a config where "Name" is the name of the planet. The name should be able to just match their in-game english names, however if you encounter any issues with that here are the in-code names for planets that are guaranteed to work: <code>SUN</code>, <code>CAVE_TWIN</code> (Ember Twin), <code>TOWER_TWIN</code> (Ash Twin), <code>TIMBER_HEARTH</code>, <code>BRITTLE_HOLLOW</code>, <code>GIANTS_DEEP</code>, <code>DARK_BRAMBLE</code>, <code>COMET</code> (Interloper), <code>WHITE_HOLE</code>, <code>WHITE_HOLE_TARGET</code> (Whitehole station I believe), <code>QUANTUM_MOON</code>, <code>ORBITAL_PROBE_CANNON</code>, <code>TIMBER_MOON</code> (Attlerock), <code>VOLCANIC_MOON</code> (Hollow's Lantern), <code>DREAMWORLD</code>, <code>MapSatellite</code>, <code>RINGWORLD</code> (the Stranger).</p>
 <p>Only some of the above modules are supported (currently) for existing planets. Things you cannot modify for existing planets include: heightmaps, procedural generation, gravity, or their orbits. You also can't make them into stars or binary focal points (but why would you want to, just delete them and replace them entirely). However this still means there are many things you can do: completely change their atmospheres, give them rings, asteroid belts, comet tails, lava, water, prop details, or signals. </p>
 <p>You can also delete parts of an existing planet. Here's part of an example config which would delete the rising sand from Ember Twin:</p>
@@ -177,14 +177,14 @@
 &quot;childrenToDestroy&quot; : [&quot;SandSphere_Rising&quot;],
 </code></pre>
 <p>In <code>childrenToDestroy</code> you list the relative paths for the children of the planet's gameObject that you want to delete.</p>
-<h3>How to destroy existing planets</h3>
+<h2>How to destroy existing planets</h2>
 <p>You do this (but with the appropriate name) as it's own config.</p>
 <pre><code class="language-json">{
     &quot;name&quot; : &quot;Ember Twin&quot;,
     &quot;destroy&quot; : true,
 }
 </code></pre>
-<p>Remember that if you destroy Timber Hearth you better put a <a href="#spawn">Spawn</a> module on another planet. If you want to entirely replace the solar system you can restroy everything, including the sun. Also, deleting a planet destroys anything orbiting it, so if you want to replace the solar system you can just destroy the sun. If you're making a brand new star system, you don't have to worry about deleting any existing planets; they won't be there.</p>
+<p>Remember that if you destroy Timber Hearth you better put a <code>Spawn</code> module on another planet. If you want to entirely replace the solar system you can restroy everything, including the sun. Also, deleting a planet destroys anything orbiting it, so if you want to replace the solar system you can just destroy the sun. If you're making a brand new star system, you don't have to worry about deleting any existing planets; they won't be there.</p>
         </div>
     </div>
 
