@@ -847,6 +847,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>If the body should have a marker on the map screen.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -984,6 +993,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>If the dark side of the body should have some slight ammount of light</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -1273,6 +1291,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>How gravity falls off with distance. Most planets use linear but the sun and some moons use inverseSquared.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -1425,7 +1452,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>A scale height used for a number of things.</p>
+                <span class="description"><p>A scale height used for a number of things. Should be the approximate radius of the body.</p>
 </span>
             
         </div>
@@ -1871,6 +1898,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>If you want the body to have a tail like the Interloper.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -2719,6 +2755,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Colour of the cloud layer. Only relevant if "cloud" has a value</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -2907,7 +2952,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -3070,7 +3115,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -3233,7 +3278,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -3396,7 +3441,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_cloudTint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -3518,7 +3563,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Relative filepath to the cloud texture, if the planet has clouds. Optional.</p>
+                <span class="description"><p>Relative filepath to the cloud texture, if the planet has clouds.</p>
 </span>
             
         </div>
@@ -3662,7 +3707,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Relative filepath to the cloud cap texture, if the planet has clouds. Optional.</p>
+                <span class="description"><p>Relative filepath to the cloud cap texture, if the planet has clouds.</p>
 </span>
             
         </div>
@@ -3806,7 +3851,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Relative filepath to the cloud ramp texture, if the planet has clouds. Optional.</p>
+                <span class="description"><p>Relative filepath to the cloud ramp texture, if the planet has clouds. If you don't put anything here it will be auto-generated.</p>
 </span>
             
         </div>
@@ -3956,7 +4001,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Use Giant's deep shader or just apply the cloud texture as is.</p>
+                <span class="description"><p>Set to false to use Giant's deep shader. Set to true to just apply the cloud texture as is.</p>
 </span>
             
         </div>
@@ -4103,7 +4148,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>If the top layer should have shadows</p>
+                <span class="description"><p>If the top layer should have shadows. Set to false if you're making a brown dwarf.</p>
 </span>
             
         </div>
@@ -4244,7 +4289,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Colour of fog on the planet.</p>
+                <span class="description"><p>Colour of fog on the planet, if you put fog.</p>
 </span>
             
         </div>
@@ -4438,7 +4483,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -4601,7 +4646,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -4764,7 +4809,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -4927,7 +4972,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_fogTint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -5045,6 +5090,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>How dense the fog is, if you put fog.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -5186,7 +5240,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Radius of fog sphere, independent of the atmosphere</p>
+                <span class="description"><p>Radius of fog sphere, independent of the atmosphere. This has to be set for there to be fog.</p>
 </span>
             
         </div>
@@ -5611,6 +5665,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Lets you survive on the planet without a suit.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -5752,7 +5815,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Whether we use an atmospheric shader on the planet.</p>
+                <span class="description"><p>Whether we use an atmospheric shader on the planet. Doesn't affect clouds, fog, rain, snow, oxygen, etc. Purely visual.</p>
 </span>
             
         </div>
@@ -6087,7 +6150,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -6250,7 +6313,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -6413,7 +6476,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -6576,7 +6639,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Atmosphere_atmosphereTint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -6828,7 +6891,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The average distance between the planet and its primary body.</p>
+                <span class="description"><p>The semi-major axis of the ellipse that is the body's orbit. For a circular orbit this is the radius.</p>
 </span>
             
         </div>
@@ -7288,7 +7351,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Is this the moon of a planet?</p>
+                <span class="description"><p>Is this the moon of a planet? Used for determining when its name is shown on the map.</p>
 </span>
             
         </div>
@@ -7432,6 +7495,25 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>An angle (in degrees) defining the point where the orbit of the body rises above the orbital plane if it has nonzero inclination.</p>
+</span>
+            
+        </div>
+    </div>
+
+    
+
+
+    
+        
+    
+
+    
+    
+
     
 
 
@@ -7465,6 +7547,8 @@
 
     
     
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_longitudeOfAscendingNode_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>360</code></span></p>
+    
 
 
             
@@ -7478,6 +7562,8 @@
             
 
         
+    
+
     
 
                     </div>
@@ -7573,6 +7659,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>At 0 the orbit is a circle. The closer to 1 it is, the more oval-shaped the orbit is.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -7606,7 +7701,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_eccentricity_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>0.99</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_eccentricity_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>0.99999</code></span></p>
     
 
 
@@ -7715,6 +7810,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>An angle (in degrees) defining the location of the periapsis (closest distance to it's primary body) if it has nonzero eccentricity.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -7871,6 +7975,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Where the planet should start off in its orbit in terms of the central angle.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -8025,6 +8138,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>The angle between the normal to the orbital plane and its axis of rotation.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -8181,6 +8303,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Rotation period in minutes.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -8322,6 +8453,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Should the body always have one side facing its primary?</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -8459,6 +8599,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Referring to the orbit line in the map screen.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -8936,7 +9085,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -9099,7 +9248,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -9262,7 +9411,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -9425,7 +9574,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Orbit_tint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -9553,7 +9702,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Should we just draw a line behind its orbit.</p>
+                <span class="description"><p>Should we just draw a line behind its orbit instead of the entire circle/ellipse?</p>
 </span>
             
         </div>
@@ -9820,6 +9969,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Inner radius of the disk </p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -10107,6 +10265,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Angle between the rings and the equatorial plane of the planet.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -10247,6 +10414,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Angle defining the point where the rings rise up from the planet's equatorial plane if inclination is nonzero.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -10547,6 +10723,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Allows the rings to rotate.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -10681,6 +10866,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Allows the rings to grow/shrink with time.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -11669,6 +11863,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>The lowest points on your planet will be at this height.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -11805,6 +12008,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>The highest points on your planet will be at this height.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -12420,7 +12632,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -12583,7 +12795,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -12746,7 +12958,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -12909,7 +13121,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ProcGen_colour_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -13446,6 +13658,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Angle between the rings and the equatorial plane of the planet.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -13600,6 +13821,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Angle defining the point where the rings rise up from the planet's equatorial plane if inclination is nonzero.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -14398,7 +14628,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -14569,7 +14799,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -14740,7 +14970,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -14911,7 +15141,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="AsteroidBelt_procGen_colour_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -15172,6 +15402,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Radius of the star.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -15507,7 +15746,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -15670,7 +15909,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -15833,7 +16072,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -15996,7 +16235,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_tint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -16118,7 +16357,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Colour of the solar flares.</p>
+                <span class="description"><p>Colour of the solar flares. The shader is a bit weird so the value you put won't exactly reflect what you see. Try experimenting with different colours to see what works.</p>
 </span>
             
         </div>
@@ -16312,7 +16551,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -16475,7 +16714,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -16638,7 +16877,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -16801,7 +17040,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_solarFlareTint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -17117,7 +17356,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -17280,7 +17519,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -17443,7 +17682,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -17606,7 +17845,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Star_lightTint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -17883,6 +18122,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>The default sun has its own atmosphere that is different from regular planets. If you want that, set this to true.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -18014,6 +18262,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Allows the star to shrink/grow over time.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -21168,6 +21425,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>How many props to scatter around the planet.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -23431,169 +23697,6 @@
     </div>
 </div>
             
-                
-<div class="row my-2">
-    <div class="col">
-        <div class="accordion" id="accordionProps_details_items_generateColliders">
-            <div class="accordion-item">
-                <h2 class="accordion-header" id="headingProps_details_items_generateColliders">
-                    <button class="accordion-button collapsed" type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#Props_details_items_generateColliders"
-                            aria-expanded="" aria-controls="Props_details_items_generateColliders"
-                            onclick="setAnchor('#Props_details_items_generateColliders')">
-
-                        
-                        <span class="property-nam align-middle pb-1">GenerateColliders</span>
-                        
-                        
-                        
-                        
-                    </button>
-                </h2>
-                <div id="Props_details_items_generateColliders"
-                     class="accordion-collapse collapse"
-                     aria-labelledby="headingProps_details_items_generateColliders"
-                     data-parent="#accordionProps_details_items_generateColliders">
-                    <div class="accordion-body">
-                        
-
-                        
-
-                        
-    
-
-    
-    
-
-    
-        
-            <div class="breadcrumbs">
-    
-        
-            Root
-        
-        
-            <i class="bi-arrow-right-short"></i>
-        
-    
-        
-            <a href="#Props"
-               onclick="anchorLink('Props')">Props</a>
-        
-        
-            <i class="bi-arrow-right-short"></i>
-        
-    
-        
-            <a href="#Props_details"
-               onclick="anchorLink('Props_details')">Details</a>
-        
-        
-            <i class="bi-arrow-right-short"></i>
-        
-    
-        
-            <a href="#Props_details_items"
-               onclick="anchorLink('Props_details_items')">Details items</a>
-        
-        
-            <i class="bi-arrow-right-short"></i>
-        
-    
-        
-            <a href="#Props_details_items_generateColliders"
-               onclick="anchorLink('Props_details_items_generateColliders')">GenerateColliders</a>
-        
-        
-    
-</div>
-        
-
-        
-        
-            <div class="row">
-                <div class="col">
-                    <span class="badge bg-secondary">Type: bool</span>
-                </div>
-            </div>
-        
-
-        
-        
-        
-            <div class="row">
-                <div class="col">
-                     <span class="badge bg-secondary">Default: false</span>
-                </div>
-            </div>
-        
-        <br/>
-
-        
-        
-
-    <div class="row">
-        <div class="col">
-            
-                <span class="description"><p>For each mesh filter found here should we make a mesh collider?</p>
-</span>
-            
-        </div>
-    </div>
-
-    
-
-
-    
-        
-        
-            
-
-            
-            
-            
-            
-            
-
-            
-            
-            
-
-            
-            
-
-            
-            
-
-            
-            
-
-
-            
-            
-
-
-            
-            
-
-            
-            
-            
-
-            
-            
-
-        
-    
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-            
 
         
     
@@ -23938,6 +24041,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>When you enter into dialogue, you will look here.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -24600,6 +24712,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Radius of the spherical collision volume where you get the "talk to" prompt when looking at. If you use a remoteTriggerPosition, this will instead be the size of the volume that will trigger the dialogue when you enter it.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -24751,6 +24872,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Relative path to the xml file defining the dialogue.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -24901,6 +25031,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Allows you to trigger dialogue from a distance when you walk into an area.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -31152,7 +31291,7 @@
         
             <div class="row">
                 <div class="col">
-                    <span class="badge bg-secondary">Type: enum (of string)</span>
+                    <span class="badge bg-secondary">Type: string</span>
                 </div>
             </div>
         
@@ -31165,6 +31304,15 @@
         
         
 
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>The frequency ID of the signal. The built-in game values are "Default", "Traveler", "Quantum", "EscapePod", "Statue", "WarpCore", "HideAndSeek", and "Radio". You can also put a custom value.</p>
+</span>
+            
+        </div>
+    </div>
+
     
 
 
@@ -31181,29 +31329,6 @@
 
             
             
-                <div class="enum-value" id="Signal_signals_items_frequency_enum">
-                <h4>Must be one of:</h4>
-                <ul class="list-group">
-                
-                    <li class="list-group-item enum-item">"Default"</li>
-                
-                    <li class="list-group-item enum-item">"Traveler"</li>
-                
-                    <li class="list-group-item enum-item">"Quantum"</li>
-                
-                    <li class="list-group-item enum-item">"EscapePod"</li>
-                
-                    <li class="list-group-item enum-item">"Statue"</li>
-                
-                    <li class="list-group-item enum-item">"WarpCore"</li>
-                
-                    <li class="list-group-item enum-item">"HideAndSeek"</li>
-                
-                    <li class="list-group-item enum-item">"Radio"</li>
-                
-                </ul>
-                </div>
-            
             
 
             
@@ -31218,6 +31343,9 @@
 
             
             
+    
+    
+
 
 
             
@@ -31335,6 +31463,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>The unique ID of the signal.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -31490,7 +31627,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Name of an existing AudioClip in the game</p>
+                <span class="description"><p>Name of an existing AudioClip in the game that will player over the signal.</p>
 </span>
             
         </div>
@@ -32136,7 +32273,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>How close the player must get to the signal to detect it</p>
+                <span class="description"><p>How close the player must get to the signal to detect it. This is when you get the "Unknown Signal Detected" notification.</p>
 </span>
             
         </div>
@@ -32298,7 +32435,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>How close the player must get to the signal to identify it</p>
+                <span class="description"><p>How close the player must get to the signal to identify it. This is when you learn it's name.</p>
 </span>
             
         </div>
@@ -32466,7 +32603,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>False if the player can hear the signal without equipping the signal-scope</p>
+                <span class="description"><p>False if the player can hear the signal without equipping the signal-scope.</p>
 </span>
             
         </div>
@@ -32629,7 +32766,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Only set to true if you are putting this signal inside a cloaking field</p>
+                <span class="description"><p>Only set to true if you are putting this signal inside a cloaking field.</p>
 </span>
             
         </div>
@@ -32924,6 +33061,15 @@
 
         
         
+
+    <div class="row">
+        <div class="col">
+            
+                <span class="description"><p>Radius of the singularity. Note that this isn't the same as the event horizon, but includes the entire volume that has warped effects in it.</p>
+</span>
+            
+        </div>
+    </div>
 
     
 
@@ -34537,7 +34683,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -34700,7 +34846,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -34863,7 +35009,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -35026,7 +35172,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Water_tint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -36173,7 +36319,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -36336,7 +36482,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -36499,7 +36645,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -36662,7 +36808,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Lava_tint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -37809,7 +37955,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -37972,7 +38118,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -38135,7 +38281,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -38298,7 +38444,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Sand_tint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -39601,7 +39747,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -39764,7 +39910,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -39927,7 +40073,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -40090,7 +40236,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="Funnel_tint_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -40911,7 +41057,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The xml file to load ship log entries from</p>
+                <span class="description"><p>The relative path to the xml file to load ship log entries from.</p>
 </span>
             
         </div>
@@ -41055,7 +41201,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>A path to the folder where entry sprites are stored</p>
+                <span class="description"><p>A path to the folder where entry sprites are stored.</p>
 </span>
             
         </div>
@@ -41199,7 +41345,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>A list of fact IDs to reveal when the game starts</p>
+                <span class="description"><p>A list of fact IDs to reveal when the game starts.</p>
 </span>
             
         </div>
@@ -41460,7 +41606,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>A set of positions to use instead of automatic layout in rumor mode</p>
+                <span class="description"><p>A set of positions to use instead of automatic layout in rumor mode.</p>
 </span>
             
         </div>
@@ -41706,7 +41852,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The name of the entry to apply the position to</p>
+                <span class="description"><p>The name of the entry to apply the position to.</p>
 </span>
             
         </div>
@@ -42497,7 +42643,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The path to the sprite to show when the planet is revealed in map mode</p>
+                <span class="description"><p>The path to the sprite to show when the planet is revealed in map mode.</p>
 </span>
             
         </div>
@@ -42649,7 +42795,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The path to the sprite to show when the planet is unexplored in map mode</p>
+                <span class="description"><p>The path to the sprite to show when the planet is unexplored in map mode.</p>
 </span>
             
         </div>
@@ -42801,7 +42947,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Manually place this planet at the specified position</p>
+                <span class="description"><p>Manually place this planet at the specified position.</p>
 </span>
             
         </div>
@@ -43276,7 +43422,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Specify where this planet is in terms of navigation</p>
+                <span class="description"><p>Specify where this planet is in terms of navigation.</p>
 </span>
             
         </div>
@@ -43757,7 +43903,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Scale to apply to the planet in map mode</p>
+                <span class="description"><p>Scale to apply to the planet in map mode.</p>
 </span>
             
         </div>
@@ -43915,7 +44061,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Hide the planet completely if unexplored instead of showing an outline</p>
+                <span class="description"><p>Hide the planet completely if unexplored instead of showing an outline.</p>
 </span>
             
         </div>
@@ -44070,7 +44216,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Extra distance to apply to this object in map mode</p>
+                <span class="description"><p>Extra distance to apply to this object in map mode.</p>
 </span>
             
         </div>
@@ -44228,7 +44374,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Completely remove this planet (and it's children) from map mode</p>
+                <span class="description"><p>Completely remove this planet (and it's children) from map mode.</p>
 </span>
             
         </div>
@@ -44377,7 +44523,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Place non-selectable object in map mode (like sand funnels)</p>
+                <span class="description"><p>Place non-selectable object in map mode (like sand funnels).</p>
 </span>
             
         </div>
@@ -44639,7 +44785,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The sprite to show when the parent AstroBody is revealed</p>
+                <span class="description"><p>The sprite to show when the parent AstroBody is revealed.</p>
 </span>
             
         </div>
@@ -44807,7 +44953,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The sprite to show when the parent AstroBody is rumored/unexplored</p>
+                <span class="description"><p>The sprite to show when the parent AstroBody is rumored/unexplored.</p>
 </span>
             
         </div>
@@ -44975,7 +45121,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The angle in degrees to rotate the detail</p>
+                <span class="description"><p>The angle in degrees to rotate the detail.</p>
 </span>
             
         </div>
@@ -45146,7 +45292,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>Whether to completely hide this detail when the parent AstroBody is unexplored</p>
+                <span class="description"><p>Whether to completely hide this detail when the parent AstroBody is unexplored.</p>
 </span>
             
         </div>
@@ -45311,7 +45457,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The position (relative to the parent) to place the detail</p>
+                <span class="description"><p>The position (relative to the parent) to place the detail.</p>
 </span>
             
         </div>
@@ -45834,7 +45980,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The amount to scale the x and y axis of the detail by</p>
+                <span class="description"><p>The amount to scale the x and y axis of the detail by.</p>
 </span>
             
         </div>
@@ -46372,7 +46518,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>A set of colors to apply to curiosities</p>
+                <span class="description"><p>A set of colors to apply to curiosities.</p>
 </span>
             
         </div>
@@ -46618,7 +46764,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The ID of the curiosity to apply the color to</p>
+                <span class="description"><p>The ID of the curiosity to apply the color to.</p>
 </span>
             
         </div>
@@ -46778,7 +46924,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The color to apply to entries with this curiosity</p>
+                <span class="description"><p>The color to apply to entries with this curiosity.</p>
 </span>
             
         </div>
@@ -46988,7 +47134,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -47167,7 +47313,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -47346,7 +47492,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -47525,7 +47671,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_color_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -47663,7 +47809,7 @@
     <div class="row">
         <div class="col">
             
-                <span class="description"><p>The color to apply to highlighted entries with this curiosity</p>
+                <span class="description"><p>The color to apply to highlighted entries with this curiosity.</p>
 </span>
             
         </div>
@@ -47873,7 +48019,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_R_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_R_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -48052,7 +48198,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_G_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_G_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -48231,7 +48377,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_B_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_B_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
@@ -48410,7 +48556,7 @@
 
     
     
-        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_A_number">Value must be greater or equal to <code>0</code> and lesser or equal to <code>255</code></span></p>
+        <p><span class="badge bg-dark restriction numeric-restriction" id="ShipLog_Curiosities_items_highlightColor_A_number">Value must be greater or equal to <code>0</code></span></p>
     
 
 
