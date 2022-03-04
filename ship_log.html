@@ -1,0 +1,269 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>New Horizons Documentation | Ship Log</title><meta name="keywords" content="New Horizons, Outer Wilds, Modding, C#, Unity"><meta name="description" content="['A guide to editing the ship log in New Horizons']"><meta property="og:type" content="website"><meta property="og:title" content="New Horizons Documentation | Ship Log"><meta property="og:description" content="['A guide to editing the ship log in New Horizons']"><meta property="og:url" content="https://nh.outerwildsmods.com/ship_log.html"><meta property="og:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"><meta property="og:image:alt" content="['A guide to editing the ship log in New Horizons']"><meta name="twitter:title" content="New Horizons Documentation | Ship Log"><meta name="twitter:description" content="['A guide to editing the ship log in New Horizons']"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"><link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/fav/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/fav/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="msapplication-config" content="/fav/browserconfig.xml"><meta name="msapplication-TileColor" content="#222222"><meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png"><meta name="theme-color" data-react-helmet="true" content="#222222"><link href="https://bootswatch.com/5/darkly/bootstrap.min.css" crossorigin="anonymous" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/github-dark-dimmed.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script></head><body><header><nav class="navbar navbar-expand-xl navbar-dark bg-dark mb-2"><div class="container-fluid"><a class="navbar-brand" href="/" aria-label="Home"><img width="29" height="29" src="/fav/favicon-96x96.png" alt="New Horizons Logo" class="d-inline-block align-text-top me-2"> New Horizons</a><button class="navbar-toggler align-text-middle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item me-1"><a href="/" class="nav-link ">Home</a></li><li class="nav-item me-1"><a href="/details.html" class="nav-link ">Detailing</a></li><li class="nav-item me-1"><a href="/update_existing.html" class="nav-link ">Update Planets</a></li><li class="nav-item me-1"><a href="/ship_log.html" class="nav-link active" aria-current="page">Ship Log</a></li><li class="nav-item me-1"><a href="/translation.html" class="nav-link ">Translations</a></li><li class="nav-item me-1"><a href="/dialogue.html" class="nav-link ">Dialogue</a></li><li class="nav-item me-1"><a href="/api.html" class="nav-link ">API</a></li><li class="nav-item dropdown"><a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Schemas </a><ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="/schemas/body.html">Body</a></li><li><a class="dropdown-item" href="/schemas/star_system.html">Star System</a></li><li><a class="dropdown-item" href="/schemas/translation.html">Translation</a></li></ul></li></ul><ul class="navbar-nav mb-2 ms-md-auto mb-lg-0"><li class="nav-item me-2"><a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://github.com/xen-42/outer-wilds-new-horizons"><i class="bi-github"></i><small class="d-xl-none ms-2">GitHub</small></a></li><li class="nav-item me-2"><a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://discord.gg/9vE5aHxcF9"><i class="bi-discord"></i><small class="d-xl-none ms-2">Discord</small></a></li></ul></div></div></nav></header><main><div class="container-lg"><div class="row"><div class="col"><h1 id="ship-log">Ship Log</h1><p>Welcome! this page outlines how to create a custom ship log.</p><h2 id="helpful-mods">Helpful Mods</h2><p>These mods are useful when developing your ship log</p><ul><li><a href="https://outerwildsmods.com/mods/unityexplorer">Unity Explorer</a></li><li><a href="https://outerwildsmods.com/mods/collidervisualizer">Collider Visualizer</a></li><li><a href="https://outerwildsmods.com/mods/saveeditor">Save Editor</a></li></ul><h2 id="helpful-tools">Helpful Tools</h2><p>These tools/references are highly recommended</p><ul><li><a href="https://code.visualstudio.com/">VSCode</a></li><li><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml">VSCode XML Addon</a></li><li><a href="https://www.w3schools.com/xml/xml_whatis.asp">XML Basics Tutorial</a></li><li><a href="https://github.com/xen-42/outer-wilds-new-horizons/blob/master/NewHorizons/shiplog_schema.xsd">The XML Schema</a></li><li><a href="https://github.com/xen-42/ow-new-horizons-examples">The Examples Mod</a></li></ul><h1 id="understanding-ship-logs">Understanding Ship Logs</h1><p>First thing's first, I'll define some terminology regarding ship logs in the game, and how ship logs are structured.</p><h2 id="entries">Entries</h2><p>An entry is a card you see in rumor mode, it represents a specific area or concept in the game, such as Timber Hearth's village or the southern observatory on Brittle Hollow.<br> An entry is split up into facts, a fact can either be a rumor fact or an explore fact.</p><p><img alt="entryExample" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/entry_example.png"><em>In red you can see an entry, in green you can see the entry's facts</em></p><h3 id="curiosities">Curiosities</h3><p>Curiosities are entries that represent big ideas in the story, such as the ATP or the OPC.<br> Non-curiosity entries have a Curiosity attribute that can be set to make the color of that entry match the color of the curiosity (Like how everything regarding the Vessel is red)</p><p><img alt="curiosityExample" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/curiosity_example.png"><em>The Ash Twin Project is an example of a curiosity (internally it's called TIME_LOOP)</em></p><h3 id="child-entries">Child Entries</h3><p>Entries can be children of other entries, meaning they'll be smaller.</p><p><img alt="childEntryExample" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/child_entry_example.png"><em>The murals at the old settlement on Brittle Hollow are examples of child entries</em></p><h2 id="rumor-facts">Rumor Facts</h2><p>A rumor fact represents the information you might hear about a specific area or concept, usually, you get these through dialogue or maybe by observing a faraway planet.</p><p><img alt="rumorFactExample" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/rumor_example.png"></p><h2 id="explore-facts">Explore Facts</h2><p>Explore facts represent the information you learn about a specific area or concept.</p><p><img alt="exploreFactExample" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/explore_example.png"></p><h1 id="the-xml">The XML</h1><p>Now that we know some terminology, let's get into how the XML works.<br> Every planet in the ship log is represented by a single XML file, you can see this if you use the unity explorer mod and navigate to ShipLogManager.</p><h2 id="example-file">Example File</h2><pre><code class="language-xml">&lt;!-- Example File --&gt;
+&lt;!-- All files must have &quot;AstroObjectEntry&quot; as their root element, the xmlns:xsi=... and xsi:noNamespaceSchemaLocation=... is optional but heavily encouraged to reduce errors --&gt;
+&lt;AstroObjectEntry xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+                  xsi:noNamespaceSchemaLocation=&quot;https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/master/NewHorizons/shiplog_schema.xsd&quot;&gt;
+    &lt;ID&gt;EXAMPLE_PLANET&lt;/ID&gt; &lt;!-- The ID of the planet this xml file is for --&gt;
+
+    &lt;Entry&gt; &lt;!-- An Entry For This Planet --&gt;
+        &lt;ID&gt;EXAMPLE_ENTRY&lt;/ID&gt; &lt;!-- The ID of this entry --&gt;
+        &lt;Name&gt;Example Planet&lt;/Name&gt; &lt;!-- The name to show for this entry both on the card and in map mode --&gt;
+        &lt;Curiosity&gt;EXAMPLE_ENTRY
+        &lt;/Curiosity&gt; &lt;!-- The curiosity this entry belongs to (optional) in this case, it belongs to itself --&gt;
+        &lt;IsCuriosity/&gt; &lt;!-- Marks this entry as a curiosity, makes it bigger in rumor mode and allows custom colors --&gt;
+        &lt;IgnoreMoreToExplore/&gt; &lt;!-- Don't show a &quot;more to explore&quot; icon --&gt;
+        &lt;AltPhotoCondition&gt;EXAMPLE_EXPLORE_FACT
+        &lt;/AltPhotoCondition&gt; &lt;!-- Show an alternate picture if a fact is known --&gt;
+
+        &lt;RumorFact&gt; &lt;!-- A rumor fact that belongs to this entry --&gt;
+            &lt;ID&gt;EXAMPLE_RUMOR_FACT&lt;/ID&gt; &lt;!-- The ID of this fact --&gt;
+            &lt;RumorName&gt;Cool Rock RUMOR&lt;/RumorName&gt; &lt;!-- The name of the rumor this fact relates to --&gt;
+            &lt;Text&gt;Example Rumor Text&lt;/Text&gt; &lt;!-- The Text to display for this fact --&gt;
+        &lt;/RumorFact&gt;
+
+        &lt;ExploreFact&gt; &lt;!-- An explore fact that belongs to this entry --&gt;
+            &lt;ID&gt;EXAMPLE_EXPLORE_FACT&lt;/ID&gt; &lt;!-- The ID of this fact --&gt;
+            &lt;Text&gt;Example Explore Fact
+                &lt;![CDATA[&lt;color=orange&gt;This is orange&lt;/color&gt;]]&gt;&lt;/Text&gt; &lt;!-- The Text to display for this fact, notice how you can use color just like in dialogue --&gt;
+            &lt;AltText&gt; &lt;!-- Text to display for this fact if another fact is known --&gt;
+                &lt;Text&gt;&lt;![CDATA[&lt;color=blue&gt;Different Text To Display&lt;/color&gt;]]&gt;&lt;/Text&gt; &lt;!-- The text to display --&gt;
+                &lt;Condition&gt;EXAMPLE_CHILD_RUMOR_FACT
+                &lt;/Condition&gt; &lt;!-- The fact that needs to be known to make this text display --&gt;
+            &lt;/AltText&gt;
+        &lt;/ExploreFact&gt;
+
+        &lt;Entry&gt; &lt;!-- Makes a child of this entry (displays smaller in rumor mode and indented in map mode) --&gt;
+            &lt;ID&gt;EXAMPLE_CHILD_ENTRY&lt;/ID&gt; &lt;!-- The ID of this child entry --&gt;
+            &lt;Name&gt;Example Child Entry&lt;/Name&gt; &lt;!-- The name of this child entry --&gt;
+            &lt;Curiosity&gt;COOL_ROCK&lt;/Curiosity&gt; &lt;!-- The curiosity of this child entry --&gt;
+
+            &lt;!-- Create some facts for this child entry --&gt;
+            &lt;RumorFact&gt;
+                &lt;ID&gt;EXAMPLE_CHILD_RUMOR_FACT&lt;/ID&gt;
+                &lt;RumorName&gt;Example Child Rumor Fact&lt;/RumorName&gt;
+                &lt;Text&gt;Example Child Rumor Fact Text&lt;/Text&gt;
+            &lt;/RumorFact&gt;
+
+            &lt;ExploreFact&gt;
+                &lt;ID&gt;EXAMPLE_CHILD_EXPLORE_FACT&lt;/ID&gt;
+                &lt;Text&gt;Example Child Explore Fact Text&lt;/Text&gt;
+            &lt;/ExploreFact&gt;
+        &lt;/Entry&gt;
+    &lt;/Entry&gt;
+
+    &lt;Entry&gt; &lt;!-- Create another entry --&gt;
+        &lt;ID&gt;EXAMPLE_ENTRY_2&lt;/ID&gt; &lt;!-- Make sure IDs are unique! --&gt;
+        &lt;Name&gt;Example Entry 2&lt;/Name&gt;
+        &lt;Curiosity&gt;EXAMPLE_ENTRY&lt;/Curiosity&gt; &lt;!-- Set this entry's curiosity to the other one we defined --&gt;
+        &lt;IgnoreMoreToExploreCondition&gt;EXAMPLE_EXPLORE_FACT_2
+        &lt;/IgnoreMoreToExploreCondition&gt; &lt;!-- Don't show a more to explore icon if a fact is known --&gt;
+
+        &lt;!-- Make some facts for this second entry --&gt;
+        &lt;RumorFact&gt;
+            &lt;ID&gt;EXAMPLE_RUMOR_FACT_2&lt;/ID&gt;
+            &lt;SourceID&gt;EXAMPLE_ENTRY&lt;/SourceID&gt; &lt;!-- Set SourceID to connect a line from one entry to another --&gt;
+            &lt;RumorName&gt;Example Rumor Fact 2&lt;/RumorName&gt;
+            &lt;Text&gt;Example Rumor Fact 2&lt;/Text&gt;
+        &lt;/RumorFact&gt;
+
+        &lt;ExploreFact&gt;
+            &lt;ID&gt;EXAMPLE_EXPLORE_FACT_2&lt;/ID&gt;
+            &lt;Text&gt;Example Explore Fact 2&lt;/Text&gt;
+        &lt;/ExploreFact&gt;
+
+        &lt;ExploreFact&gt;
+            &lt;ID&gt;EXAMPLE_EXPLORE_FACT_3&lt;/ID&gt;
+            &lt;Text&gt;Example Explore Fact 3&lt;/Text&gt;
+        &lt;/ExploreFact&gt;
+    &lt;/Entry&gt;
+&lt;/AstroObjectEntry&gt;
+</code></pre><h2 id="using-the-schema">Using The Schema</h2><p>In the example XML, you may notice something like <code>xsi:noNamespaceSchemaLocation</code> at the top, this tells whatever editor you're using that the file at that link is the schema. The game simply ignores this though, so it won't be able to catch errors at runtime.<br> Some editors may require you to <a href="https://code.visualstudio.com/docs/editor/workspace-trust">Trust</a> the workspace to use the schema file. Doing this varies per-editor, and you may also have to right-click the link and click download.</p><h2 id="loading-the-file">Loading The File</h2><p>You can load your XML file to your planet by doing adding the following to your planet's config</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;
+  }
+}
+</code></pre><h1 id="rumor-mode-options">Rumor Mode Options</h1><h2 id="entry-layout">Entry Layout</h2><p>By default, entries in rumor mode are laid out by rows, where each row is one planet. This will not make for a perfect layout, so you can use the <code>entryPositions</code> property to change them<br> For example, if I want to change an entry with the ID of <code>EXAMPLE_ENTRY</code> and another with the ID of <code>EXAMPLE_ENTRY_2</code>:</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;entryPositions&quot;: [
+      {
+        &quot;id&quot;: &quot;EXAMPLE_ENTRY&quot;,
+        &quot;position&quot;: {
+          &quot;x&quot;: 100,
+          &quot;y&quot;: 200
+        }
+      },
+      {
+        &quot;id&quot;: &quot;EXAMPLE_ENTRY_2&quot;,
+        &quot;position&quot;: {
+          &quot;x&quot;: 200,
+          &quot;y&quot;: 100
+        }
+      }
+    ]
+  }
+}
+</code></pre><p><img alt="autoDetectiveMode" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/auto_rumor_mode.png"><em>A set of entries laid out with auto mode</em></p><h2 id="images">Images</h2><p>Custom entry images are a bit different from other custom images, instead of pointing to each file for each entry, you point to a folder:</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;spriteFolder&quot;: &quot;planets/example_planet_entry_sprites/&quot;
+  }
+}
+</code></pre><p>Each file is in this folder is then named the ID of each entry.<br> for example, <code>EXAMPLE_ENTRY</code>'s file would be named <code>EXAMPLE_ENTRY.png</code>.<br> you set alternate sprites by making a file with the entry's ID and <code>_ALT</code> at the end, so <code>EXAMPLE_ENTRY</code>'s alt image would be <code>EXAMPLE_ENTRY_ALT.png</code>.</p><h2 id="curiosity-colors">Curiosity Colors</h2><p>Colors for each curiosity is given in a list, so if I wanted the curiosity <code>EXAMPLE_ENTRY</code> to have a color of blue:</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;curiosities&quot;: [
+      {
+        &quot;id&quot;: &quot;EXAMPLE_ENTRY&quot;,
+        &quot;color&quot;: {
+          &quot;r&quot;: 0,
+          &quot;g&quot;: 0,
+          &quot;b&quot;: 100,
+          &quot;a&quot;: 255
+        },
+        &quot;highlightColor&quot;: {
+          &quot;r&quot;: 0,
+          &quot;g&quot;: 1,
+          &quot;b&quot;: 255,
+          &quot;a&quot;: 255
+        }
+      }
+    ]
+  }
+}
+</code></pre><p><img alt="curiosityColorChange" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/change_color.png"><em>The curiosity's color is changed to blue</em></p><h1 id="map-mode-options">Map Mode Options</h1><h2 id="layout">Layout</h2><p>Layout in map mode can be handled in two different ways, either manual or automatic, if you try to mix them you'll get an error.<br> Also, adding planets to the vanilla solar system requires you to use manual layout.</p><h3 id="automatic-layout">Automatic Layout</h3><p>In automatic layout, each planet that orbits the center of the solar system is put in a row, then, each planet orbiting those planets are put in a column, then, each planet orbiting <em>those</em> planets are put in a row for as many planets there are. The order of each planet is determined by their semi-major axis, if two planets have the same semi-major axis then they're sorted by order loaded in.</p><p><img alt="autoMapMode" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/auto_map_mode.png"><em>An example system laid out with auto mode</em></p><h4 id="offset">Offset</h4><p>The <code>offset</code> option lets you adjust a planet's offset from the last planet.</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;mapMode&quot;: {
+      &quot;offset&quot;: -5.0
+    }
+  }
+}
+</code></pre><p>For example, this offsets example planet in map mode by -5 units.</p><h3 id="manual-layout">Manual Layout</h3><p>The manual layout is a lot more involved than automatic but offers much greater freedom.<br> Manual layout <strong>requires</strong> you to fill out both <code>manualPosition</code> and <code>manualNavigationPosition</code></p><h4 id="manual-position">Manual Position</h4><p>Setting the <code>manualPosition</code> option in the <code>mapMode</code> object sets its position (if manual position isn't set, it assumes the planet is using automatic mode)</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;mapMode&quot;: {
+      &quot;manualPosition&quot;: {
+        &quot;x&quot;: 0,
+        &quot;y&quot;: 500
+      },
+      &quot;manualNavigationPosition&quot;: {
+      }
+    }
+  }
+}
+</code></pre><h4 id="manual-navigation-position">Manual Navigation Position</h4><p>This setting tells Outer Wilds how to handle navigation for this object, the x and y values correlate to the row and column of this planet. For example, the sun station is at navigationPosition (0, 1) as it is in the first column on the second row (you can't select the sun, so it doesn't have a row or column). So, by making a navigation position of:</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;mapMode&quot;: {
+      &quot;manualPosition&quot;: {
+        &quot;x&quot;: 0,
+        &quot;y&quot;: 500
+      },
+      &quot;manualNavigationPosition&quot;: {
+        &quot;x&quot;: 1,
+        &quot;y&quot;: 1
+      }
+    }
+  }
+}
+</code></pre><p>We say this planet is to the right of the sun station (putting in a position that is already occupied will override what is in that position).</p><p><img alt="navigationIndices" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/map_indices.png"></p><h4 id="overriding-vanilla-planets">Overriding Vanilla Planets</h4><p>You can also move vanilla planets by creating configs with their names and changing their manualPosition and manualNavigationPosition</p><h3 id="settings-for-both-layouts">Settings for both layouts</h3><p>These settings can be used for both type of layouts</p><h4 id="sprites">Sprites</h4><h5 id="reveal-sprite">Reveal Sprite</h5><p>A path to the sprite to show for when the planet is revealed</p><h5 id="outline-sprite">Outline Sprite</h5><p>A path to an outline to show for when the planet is undiscovered</p><h4 id="invisible-when-hidden">Invisible When Hidden</h4><p>Settings <code>invisibleWhenHidden</code> to true makes the planet entirely invisible when not discovered instead of showing an outline.</p><h4 id="scale">Scale</h4><p>How much to scale this planet in the map mode screen (you may have to change offset to compensate)</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;mapMode&quot;: {
+      &quot;scale&quot;: 0.5
+    }
+  }
+}
+</code></pre><p>Shrinks the planet by one half</p><h4 id="remove">Remove</h4><p>Don't include this planet in map mode at all, simply ignore it</p><h4 id="details">Details</h4><p>Details are images that go on top of a planet in map mode, and changes states with the planet (like the sand funnel between Ash Twin and Ember Twin)</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;mapMode&quot;: {
+      &quot;details&quot;: [
+        {
+          &quot;revealedSprite&quot;: &quot;planets/assets/image.png&quot;,
+          &quot;outlineSprite&quot;: &quot;planets/assets/outline.png&quot;,
+          &quot;invisibleWhenHidden&quot;: true,
+          &quot;rotation&quot;: 45,
+          &quot;scale&quot;: {
+            &quot;x&quot;: 0.2,
+            &quot;y&quot;: 0.2
+          },
+          &quot;position&quot;: {
+            &quot;x&quot;: 20,
+            &quot;y&quot;: 10
+          }
+        }
+      ]
+    }
+  }
+}
+</code></pre><p>As you can see, they have similar properties to planets, with the addition of rotation</p><h1 id="revealing-facts">Revealing Facts</h1><p>Of course, having a custom ship log is neat and all, but what use is it if the player can't unlock it?</p><h2 id="initial-reveal">Initial Reveal</h2><p>You can set facts to reveal as soon as the player enters the system by adding the <code>initialReveal</code> property</p><pre><code class="language-json">{
+  &quot;ShipLog&quot;: {
+    &quot;xmlFile&quot;: &quot;planets/example.xml&quot;,
+    &quot;initialReveal&quot;: [
+      &quot;EXAMPLE_RUMOR_FACT&quot;
+    ]
+  }
+}
+</code></pre><h2 id="signal-discovery">Signal Discovery</h2><p>You can set a fact to reveal as soon as a signal is identified by editing the signal's <code>Reveals</code> attribute</p><pre><code class="language-json">{
+  &quot;Signal&quot;: {
+    &quot;Signals&quot;: [
+      {
+        &quot;Frequency&quot;: &quot;Quantum&quot;,
+        &quot;Name&quot;: &quot;Quantum Planet&quot;,
+        &quot;AudioClip&quot;: &quot;OW_QuantumSignal&quot;,
+        &quot;SourceRadius&quot;: 1000,
+        &quot;Reveals&quot;: &quot;EXAMPLE_EXPLORE_FACT&quot;
+      }
+    ]
+  }
+}
+</code></pre><h2 id="dialogue">Dialogue</h2><p>You can set a fact to reveal in dialogue with the <code>&lt;RevealFacts&gt;</code> tag</p><pre><code class="language-xml">&lt;!-- Example Dialogue --&gt;
+&lt;DialogueNode&gt;
+    &lt;Name&gt;1&lt;/Name&gt;
+    &lt;Dialogue&gt;
+        &lt;Page&gt;Check your ship log!&lt;/Page&gt;
+    &lt;/Dialogue&gt;
+    &lt;RevealFacts&gt;
+        &lt;FactID&gt;EXAMPLE_EXPLORE_FACT&lt;/FactID&gt;
+    &lt;/RevealFacts&gt;
+
+    &lt;DialogueOptionsList&gt;
+        &lt;!-- ... --&gt;
+    &lt;/DialogueOptionsList&gt;
+&lt;/DialogueNode&gt;
+</code></pre><h2 id="reveal-volumes">Reveal Volumes</h2><p>Reveal volumes are triggers/colliders in the world that can unlock facts from a variety of actions.<br> Reveal volumes are specified in the <code>Props</code> module, its key is <code>reveal</code>.</p><h3 id="position">Position</h3><p>The position of the reveal volume, relative to this planet's center</p><h3 id="radius">Radius</h3><p>How big the collider is (use the collider visualizer mod for help)</p><h3 id="reveals">Reveals</h3><p>A list of facts this volume reveals</p><h3 id="reveal-on">Reveal On</h3><p>Can be any of the following:</p><h4 id="enter">Enter</h4><p>When the player enters the trigger, reveal the facts</p><h4 id="observe">Observe</h4><p>When the player observes the trigger, reveal the facts</p><h4 id="snapshot">Snapshot</h4><p>When the player takes a picture of the trigger, reveal the facts</p><h3 id="max-distance">Max Distance</h3><p>Can only be used if <code>revealOn</code> is set to Observe or Snapshot, the max distance away the player can be and still be able to trigger the reveal</p><h3 id="max-angle">Max Angle</h3><p>Can only be used if <code>revealOn</code> is set to Observe, the max angle the player can be looking away from the trigger to still trigger the reveal</p><h3 id="example">Example</h3><pre><code class="language-json">{
+  &quot;Props&quot;: {
+    &quot;reveal&quot;: [
+      {
+        &quot;position&quot;: {
+          &quot;x&quot;: -55.65454,
+          &quot;y&quot;: 83.1335,
+          &quot;z&quot;: 2.7004
+        },
+        &quot;revealOn&quot;: &quot;snapshot&quot;,
+        &quot;reveals&quot;: [
+          &quot;EXAMPLE_EXPLORE_FACT&quot;,
+          &quot;EXAMPLE_EXPLORE_FACT_2&quot;
+        ],
+        &quot;radius&quot;: 5.0
+      }
+    ]
+  }
+}
+</code></pre><h1 id="setting-entry-locations">Setting Entry Locations</h1><p>Entry locations are the "Mark On HUD" option you see when in map mode, this allows the player to go back to where they were in the event of the big funny.<br> Adding an entry location is similar to adding a Reveal Volume:</p><pre><code class="language-json">{
+  &quot;Props&quot;: {
+    &quot;entryLocation&quot;: [
+      {
+        &quot;id&quot;: &quot;EXAMPLE_ENTRY&quot;,
+        &quot;position&quot;: {
+          &quot;x&quot;: -55.65454,
+          &quot;y&quot;: 83.1335,
+          &quot;z&quot;: 2.7004
+        },
+        &quot;cloaked&quot;: false
+      }
+    ]
+  }
+}
+</code></pre><p><img alt="entryLocationExample" class="img-fluid rounded mx-auto d-flex" src="/images/ship_log/entry_position.png"></p></div></div></div></main></body></html>

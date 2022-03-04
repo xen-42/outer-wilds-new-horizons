@@ -1,185 +1,4 @@
-
-    
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    
-        
-
-
-
-
-
-
-    
-
-
-
-
-
-
-
-<meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>New Horizons Documentation</title>
-<meta name="keywords" content="New Horizons, Outer Wilds, Modding, C#, Unity" />
-<meta name="description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
-
-
-<meta property="og:type" content="website"/>
-<meta property="og:title" content="New Horizons Documentation"/>
-<meta property="og:description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
-<meta property="og:url" content="https://nh.outerwildsmods.com/"/>
-<meta property="og:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"/>
-<meta property="og:image:alt" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
-
-
-<meta name="twitter:title" content="New Horizons Documentation"/>
-<meta name="twitter:description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
-<meta name="twitter:card" content="summary_large_image"/>
-<meta name="twitter:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"/>
-
-
-
-<link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png">
-<link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png">
-<link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png">
-<link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png">
-<link rel="apple-touch-icon" sizes="114x114" href="/fav/apple-icon-114x114.png">
-<link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png">
-<link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png">
-<link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png">
-<link rel="icon" type="image/png" sizes="192x192" href="/fav/android-icon-192x192.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
-<link rel="manifest" href="/manifest.json">
-<meta name="msapplication-config" content="/fav/browserconfig.xml" />
-<meta name="msapplication-TileColor" content="#222222">
-<meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png">
-<meta name="theme-color" data-react-helmet="true" content="#222222">
-
-    
-    <link href="https://bootswatch.com/5/darkly/bootstrap.min.css"
-          crossorigin="anonymous" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/github-dark-dimmed.min.css">
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
-
-</head>
-<body>
-<header>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-2">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="/" aria-label="Home">
-                <img width="29" height="29" src="/fav/favicon-96x96.png" alt="New Horizons Logo" class="d-inline-block align-text-top me-2"/>
-                New Horizons</a>
-            <button class="navbar-toggler align-text-middle" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    
-                        
-    <li class="nav-item">
-        <a href="/" class="nav-link active" aria-current="page">Home</a>
-    </li>
-
-                    
-                        
-    <li class="nav-item">
-        <a href="/how_to_update_existing_planets.html" class="nav-link " >Update Existing Planets</a>
-    </li>
-
-                    
-                        
-    <li class="nav-item">
-        <a href="/how_to_use_new_horizons_in_other_mods.html" class="nav-link " >New Horizons Mod Api</a>
-    </li>
-
-                    
-                        
-    <li class="nav-item">
-        <a href="/translation.html" class="nav-link " >Translations</a>
-    </li>
-
-                    
-                        
-    <li class="nav-item">
-        <a href="/xml.html" class="nav-link " >Xml Examples</a>
-    </li>
-
-                    
-                        
-    <li class="nav-item">
-        <a href="/how_to_add_details_to_planets.html" class="nav-link " >Detailing</a>
-    </li>
-
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  dropdown-toggle"  href="#" id="navbarDropdown" role="button"
-                           data-bs-toggle="dropdown" aria-expanded="false">
-                            Schemas
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            
-                                <li><a class="dropdown-item"
-                                       href="/schemas/body.html">Body</a></li>
-                            
-                                <li><a class="dropdown-item"
-                                       href="/schemas/star_system.html">Star System</a></li>
-                            
-                                <li><a class="dropdown-item"
-                                       href="/schemas/translation.html">Translation</a></li>
-                            
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="navbar-nav mb-2 ms-md-auto mb-lg-0">
-                    <li class="nav-item me-2">
-                        
-    <a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://github.com/xen-42/outer-wilds-new-horizons"><i class="bi-github"></i><small class="d-lg-none ms-2">GitHub</small></a>
-
-                    </li>
-                    <li class="nav-item me-2">
-                        
-    <a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://discord.gg/9vE5aHxcF9"><i class="bi-discord"></i><small class="d-lg-none ms-2">Discord</small></a>
-
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-</header>
-<main>
-    <div class="container-lg">
-        
-    <div class="row">
-        <div class="col">
-            <p><img alt="New Horizons Logo" class="img-fluid rounded mx-auto d-flex" src="/images/home/home_logo.png" /></p>
-<h1>Welcome!</h1>
-<p>This is the official documentation for <a href="https://github.com/xen-42/outer-wilds-new-horizons">New Horizons</a></p>
-<h2>Getting Started With Planet Creation</h2>
-<p>There is a template <a href="https://github.com/xen-42/ow-new-horizons-config-template">here</a> if you want to release your own planet mod using configs. You can learn how the configs work by picking apart the <a href="https://github.com/xen-42/outer-wilds-real-solar-system">Real Solar System</a> mod or the <a href="https://github.com/xen-42/ow-new-horizons-examples">New Horizons Examples</a> mod.</p>
-<p>Planets are created using a JSON file format structure, and placed in a folder called planets (or in any subdirectory of it) in the location where New Horizons is installed (by default this folder doesn't exist, you have to create it within the xen.NewHorizons directory).</p>
-<p>To locate this directory, click the "⋮" symbol next to "New Horizons" in the Outer Wilds Mod Manager and then click "show in explorer" in the pop-up.</p>
-<p><img alt="Click the three dots in the mod manager" class="img-fluid rounded mx-auto d-flex" src="/images/home/mod_manager_dots.png" /></p>
-<p><img alt="Create a new folder named &quot;planets&quot;" class="img-fluid rounded mx-auto d-flex" src="/images/home/create_planets.png" /></p>
-<p>Now that you have created your planets folder, this is where you will put your planet config files. A config file will look something like this:</p>
-<pre><code class="language-json">{
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>New Horizons Documentation</title><meta name="keywords" content="New Horizons, Outer Wilds, Modding, C#, Unity"><meta name="description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"><meta property="og:type" content="website"><meta property="og:title" content="New Horizons Documentation"><meta property="og:description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"><meta property="og:url" content="https://nh.outerwildsmods.com/"><meta property="og:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"><meta property="og:image:alt" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"><meta name="twitter:title" content="New Horizons Documentation"><meta name="twitter:description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"><link rel="apple-touch-icon" sizes="57x57" href="/fav/apple-icon-57x57.png"><link rel="apple-touch-icon" sizes="60x60" href="/fav/apple-icon-60x60.png"><link rel="apple-touch-icon" sizes="72x72" href="/fav/apple-icon-72x72.png"><link rel="apple-touch-icon" sizes="76x76" href="/fav/apple-icon-76x76.png"><link rel="apple-touch-icon" sizes="114x114" href="/fav/apple-icon-114x114.png"><link rel="apple-touch-icon" sizes="120x120" href="/fav/apple-icon-120x120.png"><link rel="apple-touch-icon" sizes="144x144" href="/fav/apple-icon-144x144.png"><link rel="apple-touch-icon" sizes="152x152" href="/fav/apple-icon-152x152.png"><link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-icon-180x180.png"><link rel="icon" type="image/png" sizes="192x192" href="/fav/android-icon-192x192.png"><link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png"><link rel="icon" type="image/png" sizes="96x96" href="/fav/favicon-96x96.png"><link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png"><link rel="manifest" href="/manifest.json"><meta name="msapplication-config" content="/fav/browserconfig.xml"><meta name="msapplication-TileColor" content="#222222"><meta name="msapplication-TileImage" content="/fav/ms-icon-144x144.png"><meta name="theme-color" data-react-helmet="true" content="#222222"><link href="https://bootswatch.com/5/darkly/bootstrap.min.css" crossorigin="anonymous" rel="stylesheet"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/styles/github-dark-dimmed.min.css"><script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.4.0/build/highlight.min.js"></script><script>hljs.highlightAll();</script></head><body><header><nav class="navbar navbar-expand-xl navbar-dark bg-dark mb-2"><div class="container-fluid"><a class="navbar-brand" href="/" aria-label="Home"><img width="29" height="29" src="/fav/favicon-96x96.png" alt="New Horizons Logo" class="d-inline-block align-text-top me-2"> New Horizons</a><button class="navbar-toggler align-text-middle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse" id="navbarSupportedContent"><ul class="navbar-nav me-auto mb-2 mb-lg-0"><li class="nav-item me-1"><a href="/" class="nav-link active" aria-current="page">Home</a></li><li class="nav-item me-1"><a href="/details.html" class="nav-link ">Detailing</a></li><li class="nav-item me-1"><a href="/update_existing.html" class="nav-link ">Update Planets</a></li><li class="nav-item me-1"><a href="/ship_log.html" class="nav-link ">Ship Log</a></li><li class="nav-item me-1"><a href="/translation.html" class="nav-link ">Translations</a></li><li class="nav-item me-1"><a href="/dialogue.html" class="nav-link ">Dialogue</a></li><li class="nav-item me-1"><a href="/api.html" class="nav-link ">API</a></li><li class="nav-item dropdown"><a class="nav-link  dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> Schemas </a><ul class="dropdown-menu" aria-labelledby="navbarDropdown"><li><a class="dropdown-item" href="/schemas/body.html">Body</a></li><li><a class="dropdown-item" href="/schemas/star_system.html">Star System</a></li><li><a class="dropdown-item" href="/schemas/translation.html">Translation</a></li></ul></li></ul><ul class="navbar-nav mb-2 ms-md-auto mb-lg-0"><li class="nav-item me-2"><a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://github.com/xen-42/outer-wilds-new-horizons"><i class="bi-github"></i><small class="d-xl-none ms-2">GitHub</small></a></li><li class="nav-item me-2"><a class="nav-link p-2 fs-5" target="_blank" rel="noopener" href="https://discord.gg/9vE5aHxcF9"><i class="bi-discord"></i><small class="d-xl-none ms-2">Discord</small></a></li></ul></div></div></nav></header><main><div class="container-lg"><div class="row"><div class="col"><p><img alt="New Horizons Logo" class="img-fluid rounded mx-auto d-flex" src="/images/home/home_logo.png"></p><h1 id="welcome">Welcome!</h1><p>This is the official documentation for <a href="https://github.com/xen-42/outer-wilds-new-horizons">New Horizons</a></p><h2 id="getting-started-with-planet-creation">Getting Started with Planet Creation</h2><p>There is a template <a href="https://github.com/xen-42/ow-new-horizons-config-template">here</a> if you want to release your own planet mod using configs. You can learn how the configs work by picking apart the <a href="https://github.com/xen-42/outer-wilds-real-solar-system">Real Solar System</a> mod or the <a href="https://github.com/xen-42/ow-new-horizons-examples">New Horizons Examples</a> mod.</p><p>Planets are created using a JSON file format structure, and placed in a folder called planets (or in any subdirectory of it) in the location where New Horizons is installed (by default this folder doesn't exist, you have to create it within the xen.NewHorizons directory).</p><p>To locate this directory, click the "⋮" symbol next to "New Horizons" in the Outer Wilds Mod Manager and then click "show in explorer" in the pop-up.</p><p><img alt="Click the three dots in the mod manager" class="img-fluid rounded mx-auto d-flex" src="/images/home/mod_manager_dots.png"></p><p><img alt="Create a new folder named &#34;planets&#34;" class="img-fluid rounded mx-auto d-flex" src="/images/home/create_planets.png"></p><p>Now that you have created your planets folder, this is where you will put your planet config files. A config file will look something like this:</p><pre><code class="language-json">{
     &quot;name&quot; : &quot;Wetrock&quot;,
     &quot;$schema&quot;: &quot;https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/master/NewHorizons/schema.json&quot;,
     &quot;starSystem&quot; : &quot;SolarSystem&quot;,
@@ -188,7 +7,7 @@
         &quot;groundSize&quot; : 100,
         &quot;surfaceSize&quot; : 101,
         &quot;surfaceGravity&quot; : 12,
-        &quot;hasMapMarker&quot; : true,
+        &quot;hasMapMarker&quot; : true
     },
     &quot;Orbit&quot; : 
     {
@@ -213,7 +32,7 @@
         },
         &quot;fogSize&quot;: 150,
         &quot;fogDensity&quot;:0.2,
-        &quot;hasRain&quot; : true,
+        &quot;hasRain&quot; : true
     },
     &quot;Props&quot; :
     {
@@ -222,35 +41,15 @@
         ]
     }
 }
-</code></pre>
-<p>The first field you should have in any config file is the <code>name</code>. This should be unique in the solar system. If it isn't, the mod will instead try to modify the planet that already has that name.</p>
-<p>After <code>name</code> is <code>starSystem</code>. You can use this to place the planet in a different system accessible using a black-hole (see the <a href="#singularity">Singularity</a> module). To ensure compatibility with other mods this name should be unique. After setting a value for this, the changes in the config will only affect that body in that star system. By default it is "SolarSystem", which is the scene from the stock game.</p>
-<p>Including the "$schema" line is optional, but will allow your text editor to highlight errors and auto-suggest words in your config. I recommend using VSCode as a text editor, but anything that supports Json files will work. Something as basic as notepad will work but will not highlight any of your errors.</p>
-<p>The config file is then split into modules, each one with it's own fields that define how that part of the planet will be generated. In the example above I've used the <code>Base</code>, <code>Orbit</code>, <code>Atmosphere</code>, and <code>Props</code> modules. A config file must have a <code>Base</code> and <code>Orbit</code> module, the rest are optional.</p>
-<p>Each { must match up with a closing } to denote its section. If you don't know how JSONs work then check Wikipedia.</p>
-<p>Modules look like this:</p>
-<pre><code class="language-json">&quot;Star&quot; :
-{
-    &quot;size&quot; : 3000,
-    &quot;tint&quot; : 
-    {
-        &quot;r&quot; : 201,
-        &quot;g&quot; : 87,
-        &quot;b&quot; : 55,
-        &quot;a&quot; : 255
-    },
+</code></pre><p>The first field you should have in any config file is the <code>name</code>. This should be unique in the solar system. If it isn't, the mod will instead try to modify the planet that already has that name.</p><p>After <code>name</code> is <code>starSystem</code>. You can use this to place the planet in a different system accessible using a black-hole (see the <a href="#singularity">Singularity</a> module). To ensure compatibility with other mods this name should be unique. After setting a value for this, the changes in the config will only affect that body in that star system. By default, it is "SolarSystem", which is the scene from the stock game.</p><p>Including the "$schema" line is optional, but will allow your text editor to highlight errors and auto-suggest words in your config. I recommend using VSCode as a text editor, but anything that supports Json files will work. Something as basic as notepad will work but will not highlight any of your errors.</p><p>The config file is then split into modules, each one with its own fields that define how that part of the planet will be generated. In the example above I've used the <code>Base</code>, <code>Orbit</code>, <code>Atmosphere</code>, and <code>Props</code> modules. A config file must have a <code>Base</code> and <code>Orbit</code> module, the rest are optional.</p><p>Each { must match up with a closing } to denote its section. If you don't know how JSONs work then check Wikipedia.</p><p>Modules look like this:</p><pre><code class="language-json">{
+  &quot;Star&quot;: {
+    &quot;size&quot;: 3000,
+    &quot;tint&quot;: {
+      &quot;r&quot;: 201,
+      &quot;g&quot;: 87,
+      &quot;b&quot;: 55,
+      &quot;a&quot;: 255
+    }
+  }
 }
-</code></pre>
-<p>In this example the <code>Star</code> module has a <code>size</code> field and a <code>tint</code> field. Since the colour is a complex object it needs another set of { and } around it, and then it has its own fields inside it : <code>r</code>, <code>g</code>, <code>b</code>, and <code>a</code>. Don't forget to put commas after each field.</p>
-<p>Most fields are either true/false, a decimal number, and integer number, or a string (word with quotation marks around it).</p>
-<p>Check out the rest of the site for how to format planet, star system, dialogue, ship log, and translation files!</p>
-<h2>Helpful resources</h2>
-<p>The texturemap/heightmap feature was inspired by the KSP mod Kopernicus. A lot of the same techniques that apply to planet creation there apply to New Horizons. You can check out a planetary texturing guide repository <a href="https://forum.kerbalspaceprogram.com/index.php?/topic/165285-planetary-texturing-guide-repository/">here</a>.</p>
-<p><a href="https://www.photopea.com/">Photopea</a> is a free browser-based photo editor which has useful features like rectangular-to-polar coordinate transformation, useful for fixing abnormalities at the poles of your planets. </p>
-        </div>
-    </div>
-
-    </div>
-</main>
-</body>
-</html>
+</code></pre><p>In this example the <code>Star</code> module has a <code>size</code> field and a <code>tint</code> field. Since the colour is a complex object it needs another set of { and } around it, and then it has its own fields inside it : <code>r</code>, <code>g</code>, <code>b</code>, and <code>a</code>. Don't forget to put commas after each field.</p><p>Most fields are either true/false, a decimal number, and integer number, or a string (word with quotation marks around it).</p><p>Check out the rest of the site for how to format planet, star system, dialogue, ship log, and translation files!</p><h2 id="helpful-resources">Helpful resources</h2><p>The texturemap/heightmap feature was inspired by the KSP mod Kopernicus. A lot of the same techniques that apply to planet creation there apply to New Horizons. You can check out a planetary texturing guide repository <a href="https://forum.kerbalspaceprogram.com/index.php?/topic/165285-planetary-texturing-guide-repository/">here</a>.</p><p><a href="https://www.photopea.com/">Photopea</a> is a free browser-based photo editor which has useful features like rectangular-to-polar coordinate transformation, useful for fixing abnormalities at the poles of your planets. </p></div></div></div></main></body></html>
