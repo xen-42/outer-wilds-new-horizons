@@ -24,20 +24,20 @@
 <meta charset="UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>New Horizons Documentation</title>
+<title>New Horizons Documentation | Detailing</title>
 <meta name="keywords" content="New Horizons, Outer Wilds, Modding, C#, Unity" />
 <meta name="description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
 
 
 <meta property="og:type" content="website"/>
-<meta property="og:title" content="New Horizons Documentation"/>
+<meta property="og:title" content="New Horizons Documentation | Detailing"/>
 <meta property="og:description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
-<meta property="og:url" content="https://nh.outerwildsmods.com/"/>
+<meta property="og:url" content="https://nh.outerwildsmods.com/how_to_add_details_to_planets.html"/>
 <meta property="og:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"/>
 <meta property="og:image:alt" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
 
 
-<meta name="twitter:title" content="New Horizons Documentation"/>
+<meta name="twitter:title" content="New Horizons Documentation | Detailing"/>
 <meta name="twitter:description" content="Documentation for creating planets with the New Horizons mod for Outer Wilds"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://nh.outerwildsmods.com/images/home/home_logo.png"/>
@@ -95,7 +95,7 @@
                     
                         
     <li class="nav-item">
-        <a href="/" class="nav-link active" aria-current="page">Home</a>
+        <a href="/" class="nav-link " >Home</a>
     </li>
 
                     
@@ -125,7 +125,7 @@
                     
                         
     <li class="nav-item">
-        <a href="/how_to_add_details_to_planets.html" class="nav-link " >Detailing</a>
+        <a href="/how_to_add_details_to_planets.html" class="nav-link active" aria-current="page">Detailing</a>
     </li>
 
                     
@@ -169,84 +169,48 @@
         
     <div class="row">
         <div class="col">
-            <p><img alt="New Horizons Logo" class="img-fluid rounded mx-auto d-flex" src="/images/home/home_logo.png" /></p>
-<h1>Welcome!</h1>
-<p>This is the official documentation for <a href="https://github.com/xen-42/outer-wilds-new-horizons">New Horizons</a></p>
-<h2>Getting Started With Planet Creation</h2>
-<p>There is a template <a href="https://github.com/xen-42/ow-new-horizons-config-template">here</a> if you want to release your own planet mod using configs. You can learn how the configs work by picking apart the <a href="https://github.com/xen-42/outer-wilds-real-solar-system">Real Solar System</a> mod or the <a href="https://github.com/xen-42/ow-new-horizons-examples">New Horizons Examples</a> mod.</p>
-<p>Planets are created using a JSON file format structure, and placed in a folder called planets (or in any subdirectory of it) in the location where New Horizons is installed (by default this folder doesn't exist, you have to create it within the xen.NewHorizons directory).</p>
-<p>To locate this directory, click the "⋮" symbol next to "New Horizons" in the Outer Wilds Mod Manager and then click "show in explorer" in the pop-up.</p>
-<p><img alt="Click the three dots in the mod manager" class="img-fluid rounded mx-auto d-flex" src="/images/home/mod_manager_dots.png" /></p>
-<p><img alt="Create a new folder named &quot;planets&quot;" class="img-fluid rounded mx-auto d-flex" src="/images/home/create_planets.png" /></p>
-<p>Now that you have created your planets folder, this is where you will put your planet config files. A config file will look something like this:</p>
-<pre><code class="language-json">{
-    &quot;name&quot; : &quot;Wetrock&quot;,
-    &quot;$schema&quot;: &quot;https://raw.githubusercontent.com/xen-42/outer-wilds-new-horizons/master/NewHorizons/schema.json&quot;,
-    &quot;starSystem&quot; : &quot;SolarSystem&quot;,
-    &quot;Base&quot; : 
+            <h4>Details/Scatterer</h4>
+<p>For physical objects there are currently two ways of setting them up: specify an asset bundle and path to load a custom asset you created, or specify the path to the item you want to copy from the game in the scene hierarchy. Use the <a href="https://outerwildsmods.com/mods/unityexplorer">Unity Explorer</a> mod to find an object you want to copy onto your new body. Some objects work better than others for this. Good luck. Some pointers:
+- Use "Object Explorer" to search
+- Do not use the search functionality on Scene Explorer, it is really really slow. Use the "Object Search" tab instead.
+- Generally you can find planets by writing their name with no spaces/punctuation followed by "_Body".</p>
+<h3>Asset Bundles</h3>
+<p>Here is a template project: <a href="https://github.com/xen-42/outer-wilds-unity-template">Outer Wilds Unity Template</a></p>
+<p>The template project contains ripped versions of all the game scripts, meaning you can put things like DirectionalForceVolumes in your Unity project to have artificial gravity volumes loaded right into the game.</p>
+<p>If for whatever reason you want to set up a Unity project manually instead of using the template, follow these instructions:</p>
+<ol>
+<li>Start up a Unity 2017 project (I use Unity 2017.4.40f1 (64-bit), so if you use something else I can't guarantee it will work). The DLC updated Outer Wilds to 2019.4.27 so that probably works but I personally haven't tried it.</li>
+<li>In the "Assets" folder in Unity, create a new folder called "Editor". In it create a file called "CreateAssetBundle.cs" with the following code in it:</li>
+</ol>
+<pre><code class="language-cs">using UnityEditor;
+using UnityEngine;
+using System.IO;
+
+public class CreateAssetBundles
+{
+    [MenuItem(&quot;Assets/Build AssetBundles&quot;)]
+    static void BuildAllAssetBundles()
     {
-        &quot;groundSize&quot; : 100,
-        &quot;surfaceSize&quot; : 101,
-        &quot;surfaceGravity&quot; : 12,
-        &quot;hasMapMarker&quot; : true,
-    },
-    &quot;Orbit&quot; : 
-    {
-        &quot;semiMajorAxis&quot; : 1300,
-        &quot;inclination&quot; : 0,
-        &quot;primaryBody&quot; : &quot;TIMBER_HEARTH&quot;,
-        &quot;isMoon&quot; : true,
-        &quot;isTidallyLocked&quot; : true,
-        &quot;longitudeOfAscendingNode&quot; : 0,
-        &quot;eccentricity&quot; : 0,
-        &quot;argumentOfPeriapsis&quot;: 0
-    },
-    &quot;Atmosphere&quot; : 
-    {
-        &quot;size&quot; : 150,
-        &quot;fogTint&quot; : 
+        string assetBundleDirectory = &quot;Assets/StreamingAssets&quot;;
+        if (!Directory.Exists(Application.streamingAssetsPath))
         {
-            &quot;r&quot; : 200,
-            &quot;g&quot; : 255,
-            &quot;b&quot; : 255,
-            &quot;a&quot; : 255
-        },
-        &quot;fogSize&quot;: 150,
-        &quot;fogDensity&quot;:0.2,
-        &quot;hasRain&quot; : true,
-    },
-    &quot;Props&quot; :
-    {
-        &quot;scatter&quot; : [
-            {&quot;path&quot; : &quot;DreamWorld_Body/Sector_DreamWorld/Sector_DreamZone_1/Props_DreamZone_1/OtherComponentsGroup/Trees_Z1/DreamHouseIsland/Tree_DW_M_Var&quot;, &quot;count&quot; : 12}
-        ]
+            Directory.CreateDirectory(assetBundleDirectory);
+        }
+        BuildPipeline.BuildAssetBundles(assetBundleDirectory, BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);
     }
 }
 </code></pre>
-<p>The first field you should have in any config file is the <code>name</code>. This should be unique in the solar system. If it isn't, the mod will instead try to modify the planet that already has that name.</p>
-<p>After <code>name</code> is <code>starSystem</code>. You can use this to place the planet in a different system accessible using a black-hole (see the <a href="#singularity">Singularity</a> module). To ensure compatibility with other mods this name should be unique. After setting a value for this, the changes in the config will only affect that body in that star system. By default it is "SolarSystem", which is the scene from the stock game.</p>
-<p>Including the "$schema" line is optional, but will allow your text editor to highlight errors and auto-suggest words in your config. I recommend using VSCode as a text editor, but anything that supports Json files will work. Something as basic as notepad will work but will not highlight any of your errors.</p>
-<p>The config file is then split into modules, each one with it's own fields that define how that part of the planet will be generated. In the example above I've used the <code>Base</code>, <code>Orbit</code>, <code>Atmosphere</code>, and <code>Props</code> modules. A config file must have a <code>Base</code> and <code>Orbit</code> module, the rest are optional.</p>
-<p>Each { must match up with a closing } to denote its section. If you don't know how JSONs work then check Wikipedia.</p>
-<p>Modules look like this:</p>
-<pre><code class="language-json">&quot;Star&quot; :
-{
-    &quot;size&quot; : 3000,
-    &quot;tint&quot; : 
-    {
-        &quot;r&quot; : 201,
-        &quot;g&quot; : 87,
-        &quot;b&quot; : 55,
-        &quot;a&quot; : 255
-    },
-}
-</code></pre>
-<p>In this example the <code>Star</code> module has a <code>size</code> field and a <code>tint</code> field. Since the colour is a complex object it needs another set of { and } around it, and then it has its own fields inside it : <code>r</code>, <code>g</code>, <code>b</code>, and <code>a</code>. Don't forget to put commas after each field.</p>
-<p>Most fields are either true/false, a decimal number, and integer number, or a string (word with quotation marks around it).</p>
-<p>Check out the rest of the site for how to format planet, star system, dialogue, ship log, and translation files!</p>
-<h2>Helpful resources</h2>
-<p>The texturemap/heightmap feature was inspired by the KSP mod Kopernicus. A lot of the same techniques that apply to planet creation there apply to New Horizons. You can check out a planetary texturing guide repository <a href="https://forum.kerbalspaceprogram.com/index.php?/topic/165285-planetary-texturing-guide-repository/">here</a>.</p>
-<p><a href="https://www.photopea.com/">Photopea</a> is a free browser-based photo editor which has useful features like rectangular-to-polar coordinate transformation, useful for fixing abnormalities at the poles of your planets. </p>
+<ol>
+<li>Create your object in the Unity scene and save it as a prefab.</li>
+<li>
+<p>Add all files used (models, prefabs, textures, materials, etc) to an asset bundle by selecting them and using the drop down in the bottom right. Here I am adding a rover model to my "rss" asset bundle for the Real Solar System add-on.
+<img alt="setting asset bundle" class="img-fluid rounded mx-auto d-flex" src="https://user-images.githubusercontent.com/22628069/147954146-e1d610c0-0336-428f-8b32-bfc01090061c.png" /></p>
+</li>
+<li>
+<p>In the top left click the "Assets" drop-down and select "Build AssetBundles". This should create your asset bundle in a folder in the root directory called "StreamingAssets".</p>
+</li>
+<li>Copy the asset bundle and asset bundle .manifest files from StreamingAssets into your mod's "planets" folder. If you did everything properly they should work in game. To double check everything is included, open the .manifest file in a text editor to see the files included and their paths.</li>
+</ol>
         </div>
     </div>
 

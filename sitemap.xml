@@ -4,33 +4,33 @@
    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
     
         <url>
-            <loc>https://nh.outerwildsmods.com/out/index.html</loc>
+            <loc>https://nh.outerwildsmods.com/out/how_to_update_existing_planets.html</loc>
+            <priority>1.0</priority>
+        </url>
+    
+        <url>
+            <loc>https://nh.outerwildsmods.com/out/how_to_use_new_horizons_in_other_mods.html</loc>
+            <priority>1.0</priority>
+        </url>
+    
+        <url>
+            <loc>https://nh.outerwildsmods.com/out/translation.html</loc>
+            <priority>1.0</priority>
+        </url>
+    
+        <url>
+            <loc>https://nh.outerwildsmods.com/out/xml.html</loc>
+            <priority>1.0</priority>
+        </url>
+    
+        <url>
+            <loc>https://nh.outerwildsmods.com/out/how_to_add_details_to_planets.html</loc>
             <priority>1.0</priority>
         </url>
     
         <url>
             <loc>https://nh.outerwildsmods.com/out/index.html</loc>
-            <priority>1.0</priority>
-        </url>
-    
-        <url>
-            <loc>https://nh.outerwildsmods.com/out/index.html</loc>
-            <priority>1.0</priority>
-        </url>
-    
-        <url>
-            <loc>https://nh.outerwildsmods.com/out/index.html</loc>
-            <priority>1.0</priority>
-        </url>
-    
-        <url>
-            <loc>https://nh.outerwildsmods.com/out/index.html</loc>
-            <priority>1.0</priority>
-        </url>
-    
-        <url>
-            <loc>https://nh.outerwildsmods.com/out/index.html</loc>
-            <priority>1.0</priority>
+            <priority>2.0</priority>
         </url>
     
         <url>
