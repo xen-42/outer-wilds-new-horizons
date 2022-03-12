@@ -5,6 +5,8 @@
     void LoadConfigs(IModBehaviour mod);
 
     GameObject GetPlanet(string name);
+
+    string GetCurrentStarSystem(); 
 }
 </code></pre><p>In your main <code>ModBehaviour</code> class you can get the NewHorizons API like so:</p><pre><code class="language-cs">public class MyMod : ModBehaviour 
 {
