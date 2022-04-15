@@ -1,1 +1,7 @@
-<?xml version="1.0" encoding="utf-8"?><browserconfig><msapplication><tile><square70x70logo src="/fav/ms-icon-70x70.png"/><square150x150logo src="/fav/ms-icon-150x150.png"/><square310x310logo src="/fav/ms-icon-70x70.png"/><tilecolor>#222222</tilecolor></tile></msapplication></browserconfig>
+<?xml version="1.0" encoding="utf-8"?><browserconfig><msapplication><tile><square70x70logo src="
+                /fav/ms-icon-70x70.png
+            "/><square150x150logo src="
+                /fav/ms-icon-150x150.png
+            "/><square310x310logo src="
+                /fav/ms-icon-310x310.png
+            "/><tilecolor>#1a1a1a</tilecolor></tile></msapplication></browserconfig>
