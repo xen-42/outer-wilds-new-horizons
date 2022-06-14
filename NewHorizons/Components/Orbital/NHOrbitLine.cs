@@ -63,7 +63,17 @@ namespace NewHorizons.Components.Orbital
 
                 Vector3 origin = primary.transform.position + _semiMajorAxis.normalized * _fociDistance;
 
-                float num = CalcProjectedAngleToCenter(origin, _semiMajorAxis, _semiMinorAxis, _astroObject.transform.position);
+                var rot = Quaternion.identity;
+
+                if (_astroObject?._primaryBody?._primaryBody != null)
+                {
+                    var lhs = _astroObject._primaryBody.transform.position - _astroObject._primaryBody._primaryBody.transform.position;
+                    var rhs = _astroObject._primaryBody.gameObject.GetComponent<InitialMotion>().GetInitVelocity();
+                    var up = Vector3.Cross(lhs, rhs);
+                    rot = Quaternion.FromToRotation(Vector3.up, up);
+                }
+
+                float num = CalcProjectedAngleToCenter(origin, rot * _semiMajorAxis, rot * _semiMinorAxis, _astroObject.transform.position);
 
                 for (int i = 0; i < _numVerts; i++)
                 {
@@ -74,7 +84,8 @@ namespace NewHorizons.Components.Orbital
                 _lineRenderer.SetPositions(_verts);
 
                 transform.position = origin;
-                transform.rotation = Quaternion.Euler(0, 0, 0); //Quaternion.LookRotation(-SemiMajorAxis, _upAxis);
+
+                transform.rotation = rot;
 
                 float num2 = DistanceToEllipticalOrbitLine(origin, _semiMajorAxis, _semiMinorAxis, _upAxis, Locator.GetActiveCamera().transform.position);
                 float widthMultiplier = Mathf.Min(num2 * (_lineWidth / 1000f), _maxLineWidth);

@@ -88,7 +88,7 @@ namespace NewHorizons.Components
                 primaryBody = AstroObjectLocator.GetAstroObject(newOrbit.primaryBody);
                 var primaryGravity = new Gravity(primaryBody.GetGravityVolume());
                 var secondaryGravity = new Gravity(_astroObject.GetGravityVolume());
-                orbitalParams = newOrbit.GetOrbitalParameters(primaryGravity, secondaryGravity);
+                orbitalParams = newOrbit.GetOrbitalParameters(primaryGravity, secondaryGravity, primaryBody, _astroObject);
 
                 var pos = primaryBody.transform.position + orbitalParams.InitialPosition;
 

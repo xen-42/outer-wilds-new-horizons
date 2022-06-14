@@ -1,4 +1,4 @@
-﻿namespace NewHorizons.Components.Orbital
+namespace NewHorizons.Components.Orbital
 {
     public interface IOrbitalParameters
     {
@@ -10,6 +10,6 @@
         float argumentOfPeriapsis { get; set; }
         float trueAnomaly { get; set; }
 
-        OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity);
+        OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity, AstroObject primary, AstroObject secondary);
     }
 }

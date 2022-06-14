@@ -1,4 +1,4 @@
-﻿using System.ComponentModel;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using NewHorizons.Components.Orbital;
 using NewHorizons.Utility;
@@ -23,6 +23,11 @@ namespace NewHorizons.External.Modules
         /// The angle between the normal to the orbital plane and its axis of rotation.
         /// </summary>
         public float axialTilt;
+
+        /// <summary>
+        /// An angle (in degrees) defining the axis around the planet is rotated to apply the axial tilt.
+        /// </summary>
+        public float longitudeOfAxialTilt;
 
         /// <summary>
         /// Rotation period in minutes.
@@ -101,9 +106,9 @@ namespace NewHorizons.External.Modules
         /// </summary>
         public float trueAnomaly { get; set; }
 
-        public OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity)
+        public OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity, AstroObject primary, AstroObject secondary)
         {
-            return OrbitalParameters.FromTrueAnomaly(primaryGravity, secondaryGravity, eccentricity, semiMajorAxis,
+            return OrbitalParameters.FromTrueAnomaly(primaryGravity, secondaryGravity, primary, secondary, eccentricity, semiMajorAxis,
                 inclination, argumentOfPeriapsis, longitudeOfAscendingNode, trueAnomaly);
         }
     }

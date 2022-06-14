@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 namespace NewHorizons.Components.Orbital
 {
@@ -16,7 +16,7 @@ namespace NewHorizons.Components.Orbital
         public Vector3 InitialVelocity { get; private set; }
 
 
-        public static OrbitalParameters FromTrueAnomaly(Gravity primaryGravity, Gravity secondaryGravity, float eccentricity, float semiMajorAxis, float inclination, float argumentOfPeriapsis, float longitudeOfAscendingNode, float trueAnomaly)
+        public static OrbitalParameters FromTrueAnomaly(Gravity primaryGravity, Gravity secondaryGravity, AstroObject primary, AstroObject secondary, float eccentricity, float semiMajorAxis, float inclination, float argumentOfPeriapsis, float longitudeOfAscendingNode, float trueAnomaly)
         {
             var orbitalParameters = new OrbitalParameters();
             orbitalParameters.inclination = inclination;
@@ -93,6 +93,20 @@ namespace NewHorizons.Components.Orbital
             var pos = r * dir;
             var vel = v * velocityDir;
 
+            // Update relative to ecliptic
+            // If the primary body of the primary body is null its just up so wtv
+            if (primary?._primaryBody != null)
+            {
+                var lhs = primary.transform.position - primary._primaryBody.transform.position;
+                var rhs = primary.gameObject.GetComponent<InitialMotion>().GetInitVelocity();
+                var up = Vector3.Cross(lhs, rhs);
+
+                var rot = Quaternion.FromToRotation(Vector3.up, up);
+
+                pos = rot * pos;
+                vel = rot * vel;
+            }
+
             orbitalParameters.InitialPosition = pos;
             orbitalParameters.InitialVelocity = vel;
 
@@ -108,9 +122,9 @@ namespace NewHorizons.Components.Orbital
             return R3 * R2 * R1 * vector;
         }
 
-        public OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity)
+        public OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity, AstroObject primary, AstroObject secondary)
         {
-            return FromTrueAnomaly(primaryGravity, secondaryGravity, eccentricity, semiMajorAxis, inclination, argumentOfPeriapsis, longitudeOfAscendingNode, trueAnomaly);
+            return FromTrueAnomaly(primaryGravity, secondaryGravity, primary, secondary, eccentricity, semiMajorAxis, inclination, argumentOfPeriapsis, longitudeOfAscendingNode, trueAnomaly);
         }
     }
 }

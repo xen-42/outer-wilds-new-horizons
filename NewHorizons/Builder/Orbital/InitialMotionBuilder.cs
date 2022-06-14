@@ -1,4 +1,4 @@
-﻿using NewHorizons.Components.Orbital;
+using NewHorizons.Components.Orbital;
 using NewHorizons.External.Modules;
 using UnityEngine;
 using Logger = NewHorizons.Utility.Logger;
@@ -20,7 +20,9 @@ namespace NewHorizons.Builder.Orbital
 
             // Rotation
             initialMotion._initAngularSpeed = orbit.siderealPeriod == 0 ? 0f : 2f * Mathf.PI / (orbit.siderealPeriod * 60f);
-            var rotationAxis = Quaternion.AngleAxis(orbit.axialTilt, Vector3.right) * Vector3.up;
+
+            var rotationAxis = Quaternion.AngleAxis(orbit.axialTilt, Quaternion.AngleAxis(orbit.longitudeOfAxialTilt, Vector3.up) * Vector3.forward) * Vector3.up;
+            rotationAxis = OrbitalParameters.Rotate(rotationAxis, orbit.longitudeOfAscendingNode, orbit.inclination, orbit.argumentOfPeriapsis);
             secondaryBody.transform.rotation = Quaternion.FromToRotation(Vector3.up, rotationAxis);
 
             if (!orbit.isStatic && primaryBody != null)
@@ -83,7 +85,7 @@ namespace NewHorizons.Builder.Orbital
 
             var primaryGravity = new Gravity(primaryBody.GetGravityVolume());
             var secondaryGravity = new Gravity(secondaryBody.GetGravityVolume());
-            var velocity = orbit.GetOrbitalParameters(primaryGravity, secondaryGravity).InitialVelocity;
+            var velocity = orbit.GetOrbitalParameters(primaryGravity, secondaryGravity, primaryBody, secondaryBody).InitialVelocity;
 
             var parentVelocity = primaryBody?.GetComponent<InitialMotion>()?.GetInitVelocity() ?? Vector3.zero;
             initialMotion._cachedInitVelocity = velocity + parentVelocity;
@@ -125,8 +127,8 @@ namespace NewHorizons.Builder.Orbital
             primaryBody.SetOrbitalParametersFromTrueAnomaly(ecc, r1, inc, arg, lon, tru - 180);
             secondaryBody.SetOrbitalParametersFromTrueAnomaly(ecc, r2, inc, arg, lon, tru);
 
-            primaryBody.transform.position = baryCenter.transform.position + primaryBody.GetOrbitalParameters(primaryGravity, secondaryGravity).InitialPosition;
-            secondaryBody.transform.position = baryCenter.transform.position + secondaryBody.GetOrbitalParameters(secondaryGravity, primaryGravity).InitialPosition;
+            primaryBody.transform.position = baryCenter.transform.position + primaryBody.GetOrbitalParameters(primaryGravity, secondaryGravity, primaryBody, secondaryBody).InitialPosition;
+            secondaryBody.transform.position = baryCenter.transform.position + secondaryBody.GetOrbitalParameters(secondaryGravity, primaryGravity, primaryBody, secondaryBody).InitialPosition;
 
             // Update the velocities
 
@@ -143,6 +145,8 @@ namespace NewHorizons.Builder.Orbital
             var reducedOrbit = OrbitalParameters.FromTrueAnomaly(
                 combinedMassGravity,
                 reducedMassGravity,
+                baryCenter._primaryBody,
+                baryCenter,
                 ecc,
                 distance,
                 inc,

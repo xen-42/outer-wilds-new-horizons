@@ -1,4 +1,4 @@
-﻿using NewHorizons.External.Modules;
+using NewHorizons.External.Modules;
 namespace NewHorizons.Components.Orbital
 {
     public class NHAstroObject : AstroObject, IOrbitalParameters
@@ -32,9 +32,9 @@ namespace NewHorizons.Components.Orbital
             return $"ParameterizedAstroObject: Eccentricity {eccentricity}, SemiMajorAxis {semiMajorAxis}, Inclination {inclination}, ArgumentOfPeriapsis {argumentOfPeriapsis}, LongitudeOfAscendingNode {longitudeOfAscendingNode}, TrueAnomaly {trueAnomaly}";
         }
 
-        public OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity)
+        public OrbitalParameters GetOrbitalParameters(Gravity primaryGravity, Gravity secondaryGravity, AstroObject primary, AstroObject secondary)
         {
-            return OrbitalParameters.FromTrueAnomaly(primaryGravity, secondaryGravity, eccentricity, semiMajorAxis, inclination, argumentOfPeriapsis, longitudeOfAscendingNode, trueAnomaly);
+            return OrbitalParameters.FromTrueAnomaly(primaryGravity, secondaryGravity, primary, secondary, eccentricity, semiMajorAxis, inclination, argumentOfPeriapsis, longitudeOfAscendingNode, trueAnomaly);
         }
     }
 }

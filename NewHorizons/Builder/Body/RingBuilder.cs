@@ -1,4 +1,4 @@
-﻿using NewHorizons.Components;
+using NewHorizons.Components;
 using NewHorizons.Components.SizeControllers;
 using NewHorizons.Utility;
 using OWML.Common;
@@ -62,8 +62,6 @@ namespace NewHorizons.Builder.Body
 
             ringVolume.SetActive(true);
 
-
-
             return ringGO;
         }
 
@@ -88,7 +86,7 @@ namespace NewHorizons.Builder.Body
             ringGO.transform.position = rootObject.transform.position;
             ringGO.transform.rotation = rootObject.transform.rotation;
             ringGO.transform.Rotate(ringGO.transform.TransformDirection(Vector3.up), ring.longitudeOfAscendingNode);
-            ringGO.transform.Rotate(ringGO.transform.TransformDirection(Vector3.left), ring.inclination);
+            ringGO.transform.Rotate(ringGO.transform.TransformDirection(Vector3.right), ring.inclination);
 
             var ringMF = ringGO.AddComponent<MeshFilter>();
             var ringMesh = ringMF.mesh;
