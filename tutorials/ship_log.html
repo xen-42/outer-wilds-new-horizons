@@ -76,9 +76,7 @@
     "xmlFile": "planets/example.xml"
   }
 }
-</code></pre><h1 class="border-2 border-bottom border-light pb-1 mb-1" id="rumor-mode-options">Rumor Mode Options</h1><h2 class="border-1 border-bottom border-light pb-1 mb-1" id="entry-layout">Entry Layout</h2><p>By default, entries in rumor mode are laid out by rows, where each row is one planet. This will not make for a perfect layout, so you can use the <code>entryPositions</code> property to change them<br> For example, if I want to change an entry with the ID of <code>EXAMPLE_ENTRY</code> and another with the ID of <code>EXAMPLE_ENTRY_2</code>:</p><pre class="position-relative"><button class="menagerie-copy-button btn btn-sm btn-outline-primary position-absolute" style="top: 5px; right: 5px;" aria-label="Copy"><i class="bi bi-clipboard2"></i></button><code class="language-json">{
-  "ShipLog": {
-    "xmlFile": "planets/example.xml",
+</code></pre><h1 class="border-2 border-bottom border-light pb-1 mb-1" id="rumor-mode-options">Rumor Mode Options</h1><h2 class="border-1 border-bottom border-light pb-1 mb-1" id="entry-layout">Entry Layout</h2><p>By default, entries in rumor mode are laid out by rows, where each row is one planet. This will not make for a perfect layout, so you can use the <code>entryPositions</code> property in your star system config to change them<br> For example, if I want to change an entry with the ID of <code>EXAMPLE_ENTRY</code> and another with the ID of <code>EXAMPLE_ENTRY_2</code>:</p><pre class="position-relative"><button class="menagerie-copy-button btn btn-sm btn-outline-primary position-absolute" style="top: 5px; right: 5px;" aria-label="Copy"><i class="bi bi-clipboard2"></i></button><code class="language-json">{
     "entryPositions": [
       {
         "id": "EXAMPLE_ENTRY",
@@ -95,9 +93,8 @@
         }
       }
     ]
-  }
 }
-</code></pre><p><img alt="autoDetectiveMode" class="img-fluid rounded mx-auto d-flex" height="943" src="/images/ship_log/auto_rumor_mode.webp" width="1523"><em>A set of entries laid out with auto mode</em></p><h2 class="border-1 border-bottom border-light pb-1 mb-1" id="images">Images</h2><p>Custom entry images are a bit different from other custom images, instead of pointing to each file for each entry, you point to a folder:</p><pre class="position-relative"><button class="menagerie-copy-button btn btn-sm btn-outline-primary position-absolute" style="top: 5px; right: 5px;" aria-label="Copy"><i class="bi bi-clipboard2"></i></button><code class="language-json">{
+</code></pre><p>To help with this, download the unity explorer mod and manually position entries, then simply use the dev tools to dump all the entries to a json string you can copy and paste into your config.</p><p><img alt="autoDetectiveMode" class="img-fluid rounded mx-auto d-flex" height="943" src="/images/ship_log/auto_rumor_mode.webp" width="1523"><em>A set of entries laid out with auto mode</em></p><h2 class="border-1 border-bottom border-light pb-1 mb-1" id="images">Images</h2><p>Custom entry images are a bit different from other custom images, instead of pointing to each file for each entry, you point to a folder:</p><pre class="position-relative"><button class="menagerie-copy-button btn btn-sm btn-outline-primary position-absolute" style="top: 5px; right: 5px;" aria-label="Copy"><i class="bi bi-clipboard2"></i></button><code class="language-json">{
   "ShipLog": {
     "xmlFile": "planets/example.xml",
     "spriteFolder": "planets/example_planet_entry_sprites/"
