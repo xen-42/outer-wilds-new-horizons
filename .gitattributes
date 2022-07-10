@@ -1,2 +1,1 @@
-# Should normalize line-endings
-* text=auto
+* text eol=crlf
