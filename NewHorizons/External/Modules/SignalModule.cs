@@ -1,4 +1,5 @@
-﻿using System.ComponentModel;
+using System;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using NewHorizons.Utility;
 using Newtonsoft.Json;
@@ -8,9 +9,7 @@ namespace NewHorizons.External.Modules
     [JsonObject]
     public class SignalModule
     {
-        /// <summary>
-        /// List of signals to add (Why did xen do it like this)
-        /// </summary>
+        [Obsolete("Signal module and its signals list is deprecated. Directly use the Signals list.")]
         public SignalInfo[] signals;
 
         [JsonObject]

@@ -125,14 +125,6 @@ namespace NewHorizons.Builder.Props
             return name;
         }
 
-        public static void Make(GameObject body, Sector sector, SignalModule module, IModBehaviour mod)
-        {
-            foreach (var info in module.signals)
-            {
-                Make(body, sector, info, mod);
-            }
-        }
-
         public static GameObject Make(GameObject planetGO, Sector sector, SignalModule.SignalInfo info, IModBehaviour mod)
         {
             var signalGO = new GameObject($"Signal_{info.name}");

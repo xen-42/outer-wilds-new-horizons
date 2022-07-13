@@ -552,11 +552,6 @@ namespace NewHorizons.Handlers
                 PropBuildManager.Make(go, sector, rb, body.Config, body.Mod);
             }
 
-            if (body.Config.Signal != null)
-            {
-                SignalBuilder.Make(go, sector, body.Config.Signal, body.Mod);
-            }
-
             if (body.Config.Funnel != null)
             {
                 FunnelBuilder.Make(go, go.GetComponentInChildren<ConstantForceDetector>(), rb, body.Config.Funnel);

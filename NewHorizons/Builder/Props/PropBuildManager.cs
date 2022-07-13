@@ -199,6 +199,13 @@ namespace NewHorizons.Builder.Props
                     SingularityBuilder.Make(go, sector, go.GetComponent<OWRigidbody>(), config, singularity);
                 }
             }
+            if (config.Props.signals != null)
+            {
+                foreach (var info in config.Props.signals)
+                {
+                    SignalBuilder.Make(go, sector, info, mod);
+                }
+            }
         }
     }
 }

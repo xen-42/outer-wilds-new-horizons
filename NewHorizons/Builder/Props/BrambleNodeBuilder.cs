@@ -137,12 +137,12 @@ namespace NewHorizons.Builder.Props
 
                 foreach (var destinationDimension in allDimensions)
                 {
-                    if (destinationDimension.Signal?.signals == null) continue;
+                    if (destinationDimension.Props?.signals == null) continue;
 
                     var destinationIndex = dimensionNameToIndex[destinationDimension.name];
                     if (access[dimensionIndex, destinationIndex])
                     {
-                        _propogatedSignals[dimension.name].AddRange(destinationDimension.Signal.signals);
+                        _propogatedSignals[dimension.name].AddRange(destinationDimension.Props.signals);
                     }
                 }
             }

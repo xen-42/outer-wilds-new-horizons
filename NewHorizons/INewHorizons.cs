@@ -30,6 +30,11 @@ namespace NewHorizons
 
         string[] GetInstalledAddons();
 
-        GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal);
+        GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, 
+            float scale, bool alignWithNormal);
+
+        AudioSignal SpawnSignal(IModBehaviour mod, GameObject root, string audioSource, string name, string frequency, 
+            float sourceRadius = 1f, float detectionRadius = 20f, float identificationRadius = 10f, bool insideCloak = false,
+            bool onlyAudibleToScope = true, string reveals = "");
     }
 }

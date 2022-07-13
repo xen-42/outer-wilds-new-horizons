@@ -1,4 +1,5 @@
 using NewHorizons.Builder.Props;
+using NewHorizons.External.Modules;
 using NewHorizons.Utility;
 using OWML.Common;
 using OWML.Utils;
@@ -107,9 +108,41 @@ namespace NewHorizons
             }
         }
 
-        public GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, float scale, bool alignWithNormal)
+        public GameObject SpawnObject(GameObject planet, Sector sector, string propToCopyPath, Vector3 position, Vector3 eulerAngles, 
+            float scale, bool alignWithNormal)
         {
             return DetailBuilder.MakeDetail(planet, sector, propToCopyPath, position, eulerAngles, scale, alignWithNormal);
+        }
+
+        public AudioSignal SpawnSignal(IModBehaviour mod, GameObject root, string audioSource, string name, string frequency,
+            float sourceRadius = 1f, float detectionRadius = 20f, float identificationRadius = 10f, bool insideCloak = false,
+            bool onlyAudibleToScope = true, string reveals = "")
+        {
+            var audioClip = audioSource;
+            string audioFilePath = null;
+
+            if (audioClip.Contains(".wav"))
+            {
+                audioFilePath = audioClip;
+                audioClip = null;
+            }
+
+            var info = new SignalModule.SignalInfo()
+            {
+                audioClip = audioClip,
+                audioFilePath = audioFilePath,
+                detectionRadius = detectionRadius,
+                frequency = frequency,
+                identificationRadius = identificationRadius,
+                insideCloak = insideCloak,
+                name = name,
+                onlyAudibleToScope = onlyAudibleToScope,
+                position = MVector3.zero,
+                reveals = reveals,
+                sourceRadius = sourceRadius
+            };
+
+            return SignalBuilder.Make(root, null, info, mod).GetComponent<AudioSignal>();
         }
     }
 }

@@ -55,6 +55,9 @@ namespace NewHorizons.External.Configs
         [Obsolete("Singularity is deprecated, please use Props->singularities")]
         public SingularityModule Singularity;
 
+        [Obsolete("Signal module is deprecated. Use Props->signals instead.")]
+        public SignalModule Signal;
+
         #endregion Obsolete
 
         /// <summary>
@@ -137,11 +140,6 @@ namespace NewHorizons.External.Configs
         /// Add ship log entries to this planet and describe how it looks in map mode
         /// </summary>
         public ShipLogModule ShipLog;
-
-        /// <summary>
-        /// Add signals that can be heard via the signal-scope to this planet
-        /// </summary>
-        public SignalModule Signal;
 
         /// <summary>
         /// Spawn the player at this planet
@@ -340,6 +338,13 @@ namespace NewHorizons.External.Configs
                 if (Props == null) Props = new PropModule();
                 if (Props.singularities == null) Props.singularities = new SingularityModule[0];
                 Props.singularities = Props.singularities.Append(Singularity).ToArray();
+            }
+
+            if (Signal?.signals != null)
+            {
+                if (Props == null) Props = new PropModule();
+                if (Props.signals == null) Props.signals = new SignalModule.SignalInfo[0];
+                Props.signals = Props.signals.Concat(Signal.signals).ToArray();
             }
         }
     }
